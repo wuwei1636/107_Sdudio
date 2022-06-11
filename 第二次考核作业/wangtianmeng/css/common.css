@@ -1,0 +1,109 @@
+/* *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom,#06e9f9,#997fed); 
+    
+} */
+.picture{
+    width: 350px;
+    height: 350px;
+    /* background-color: blueviolet; */
+    float: left;
+    margin-top: 20px;
+    margin-left: 25px;
+}
+.container{
+    width: 300px;
+    height: 300px;
+    float: left;
+    margin-left: 0px;
+    margin-top: 0px;
+    box-shadow: darkgrey 10px 10px 30px 5px;
+    border: 2px gray;
+}
+.container ul{
+    list-style: none;
+
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+.container ul li{
+    width: 200px;
+    cursor: pointer;
+}
+.container ul li img{
+    width: 100%;
+    height: 110px;
+    border: 5px solid transparent;
+}
+.container ul .big-img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 200px;
+    background: url("images/QQ图片片1.1.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+    border: 5px solid transparent;
+    transition: 0.5s;
+    border: 5px solid orange;
+}
+.container ul .frame{
+    position: absolute;
+    left: 0;
+    bottom: 4px;
+    width: 72px;
+    height: 85px;
+    border: 5px solid orangered;
+
+    pointer-events: none;
+    transition: 0.5s;
+    
+}
+.container ul .frame::before{
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 15px;
+    background-color: orangered;
+    left: calc(50% - 15px);
+    top: -18px;
+    clip-path: polygon(0 100%,50% 0,100% 100%);
+}
+.container ul li:nth-child(1):hover ~ .big-img{
+    background-image: url("QQ图片片1.1.jpg");
+}
+.container ul li:nth-child(2):hover ~ .big-img{
+    background-image: url("QQ图片片2.jpg");
+}
+.container ul li:nth-child(3):hover ~ .big-img{
+    background-image: url("QQ图片片3.jpg");
+}
+.container ul li:nth-child(4):hover ~ .big-img{
+    background-image: url("QQ图片片4.jpg");
+}
+.container ul li:nth-child(1):hover ~ .frame{
+    left: 0;
+}
+.container ul li:nth-child(2):hover ~ .frame{
+    left: 75px;
+}
+.container ul li:nth-child(3):hover ~ .frame{
+    left: 150px;
+}
+.container ul li:nth-child(4):hover ~ .frame{
+    left: 225px;
+}

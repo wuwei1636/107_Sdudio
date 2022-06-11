@@ -1,0 +1,9 @@
+.dog{
+    margin: 0 auto;
+    display: inline;
+    width: 500px;
+    height: 500px;
+    background-color: antiquewhite;
+    float: right;
+
+}

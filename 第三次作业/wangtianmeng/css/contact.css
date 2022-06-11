@@ -1,0 +1,174 @@
+.w2{
+    width: 1355px;
+    height: 827px;
+    margin: auto;
+    background-color: #d6e8f4;
+    margin-top: 46px;
+}
+.load{
+    width: 1355px;
+    height: 827px;
+}
+.left{
+    float: left;
+    width: 240px;
+    height: 827px;
+    background-color: bisque;
+}
+.ziliao{
+    width: 240px;
+    height: 43px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+.ziliao h1{
+    color: #870813;
+}
+.line{
+    width: 240px;
+    border: 1px dashed #b25353;
+}
+.nav1{
+    width: 240px;
+    height: 234px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+.nav1 ul{
+    list-style: none;
+}
+.nav1 ul li{
+    width: 240px;
+    cursor: pointer;
+}
+.nav1 li a{
+    text-decoration: none;
+    color: black;
+    width: 240px;
+    font-size: 20px;
+    line-height: 53px;
+    cursor: pointer;
+}
+.nav1 li:hover{
+    background-color: #870813;
+    color: white;
+    font-weight: bolder;
+}
+.nav1 li a:hover{
+    background-color: #870813;
+    color: white;
+    font-weight: bolder;
+}
+.photo{
+    width: 240px;
+    height: 224px;
+    background-color: #ec5b17;
+}
+.photo img{
+    width: 240px;
+    height: 224px;
+}
+.nav2{
+    width: 240px;
+    height: 236px;
+    background-color: #f4f4f4;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.nav2 ul{
+    list-style: none;
+}
+.nav2 ul li{
+    width: 240px;
+    cursor: pointer;
+}
+.nav2 li a{
+    text-decoration: none;
+    color: black;
+    width: 240px;
+    font-size: 20px;
+    line-height: 40px;
+    cursor: pointer;
+}
+.nav2 li:hover{
+    background-color: #870813;
+    color: white;
+    font-weight: bolder;
+}
+.nav2 li a:hover{
+    background-color: #870813;
+    color: white;
+    font-weight: bolder;
+}
+
+.right{
+    float: left;
+    width: 1090px;
+    height: 502px;
+    margin-left: 23px;
+    background-color: #ffffff;
+    position: relative;
+}
+.right_red{
+    width: 110px;
+    height: 10px;
+    background-color: #9b0913;
+    position: absolute;
+    left: 20px;
+    top: 15px;
+}
+.house{
+    width: 1090px;
+    height: 56px;
+    background-color: #eeeeee;
+    position: absolute;
+    top: 25px;
+}
+.house_top{
+    width: 1000px;
+    height: 56px;
+}
+.house_word{
+    width: 110px;
+    height: 54px;
+    background-color: white;
+    position: absolute;
+    left: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.house_word h2{
+    color: #99000f;
+    text-align: center;
+    position: absolute;
+    top: 10px;
+    left: 5px;
+}
+.line1{
+    width: 1090px;
+    border: 1px dashed #b25353;
+    position: absolute;
+    top: 80px;
+    
+}
+.house_con{
+    width: 130px;
+    height: 40px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    position: absolute;
+    top: 110px;
+    left: 545px;
+}
+.house_con_imgs{
+    width: 540px;
+    height: 220px;
+    position: absolute;
+    top: 170px;
+    left: 400px;
+}
+.house_con_imgs img{
+    width: 540px;
+    height: 220px;
+}

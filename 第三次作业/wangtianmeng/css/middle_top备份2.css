@@ -1,0 +1,514 @@
+.w2{
+    width: 1023px;
+    height: 83px;
+    margin: auto;
+    margin-top: 50px;
+}
+.red{
+    width: 1023px;
+    height: 83px;
+    position: relative;
+}
+.red img{
+    width: 1023px;
+    height: 83px;
+}
+.red a{
+    position: absolute; 
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 35px;
+    font-weight: 10px;
+    left: 100px;
+    top: 15px;
+    
+}
+.banxin{
+    background-color: #d6e8f4;
+    width: 100%;
+    height: 100%;
+}
+.w3{
+    width: 1023px;
+    height: 685px;
+    margin: auto;
+    margin-top: 10px;
+    background-color: #ffffff
+}
+
+.lun{
+    width: 268px;
+    height: 210px;
+    /* background-color: #9b5ae0; */
+    float: left;
+    margin-left:8px ;
+    margin-top: 8px;
+    overflow: hidden;
+    position: relative;
+}
+.lun img{
+    display: block;
+    width: 268px;
+    height: 160px;
+}
+.lun ul li{
+    width: 268px;
+    height: 210px;
+    overflow: hidden;
+    float: left;
+    background-color: #fff;
+    text-align: center;
+}
+.lun ul {
+    position: absolute;
+    left: 0;
+    top: 0px;
+    width: 3000px;
+}
+
+
+/*添加的 */
+
+ul li,
+ol li {
+    list-style: none;
+}
+
+.lun li a {
+    text-decoration: none;
+    color: #333130;
+    font-size: 14px;
+    line-height: 36px;
+}
+
+.banner_slider {
+    position: absolute;
+    right: 0;
+    bottom: 40px;
+    z-index: 1;
+    height: 30px;
+}
+
+.banner_slider li {
+    float: left;
+    height: 20px;
+    line-height: 20px;
+    border-radius: 5px;
+    margin-right: 3px;
+    width: 25px;
+    text-align: center;
+    color: #fff;
+    background-color: rgb(94, 94, 94, .6);
+    cursor: pointer;
+}
+
+.btns {
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    /* background-color: pink; */
+}
+
+.btns span {
+    display: block;
+    width: 1px;
+    height: 1px;
+    float: left;
+}
+
+.current {
+    background-color: red !important;
+}
+
+
+/* 结束 */
+
+.det1{
+    width: 393px;
+    height: 210px;
+    background-color: #c44b0f;
+    float: left;
+    margin-left: 9px;
+    margin-top: 8px;
+}
+.study{
+    width: 393px;
+    height: 26px;
+    background-color: #f0f0f0;
+}
+.blue1{
+    float: left;
+    width: 100px;
+    height: 26px;
+    background-color: #084466;
+    margin-left: 119px;
+}
+.blue1 li{
+    list-style: none;
+    text-align: center;
+}
+.blue1 a{
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+.blue1 a:hover{
+    color: #ccc;
+}
+.logo1{
+    float: left;
+    width: 78px;
+    height: 26px;
+    background-color: #f0f0f0;
+    margin-left: 90px;
+}
+.logo1 li{
+    list-style: none;
+}
+.logo1 a{
+    text-decoration: none;
+    color: #c6cce4;
+    cursor: pointer;
+}
+.logo1 a:hover{
+    color: #f4a70c;
+}
+.logo1 img{
+    cursor: pointer;
+}
+.logo1 img:hover{
+    color: #f4a70c;
+}
+.study_btn{
+    width: 393px;
+    height: 184px;
+    background-color: #ffffff;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.news_list li{
+    width: 393px;
+    height: 15px;
+    font-size: 13px;
+    line-height: 26px;
+    padding-left: 6px;
+    cursor: pointer;
+    list-style: none;
+}
+.news_list li a{
+    float: left;
+    color: black;
+    width: 300px;
+    white-space: nowrap;
+    text-decoration: none;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.news_list li a:hover{
+    color: #da0300;
+}
+.news_list li span{
+    float: right;
+    margin-right: 10px;
+    color: black;
+}
+.news_list li span:hover{
+    color: #da0300;
+}
+.det2{
+    width: 319px;
+    height: 210px;
+    background-color: #ffffff;
+    float: left;
+    margin-left: 8px;
+    margin-top: 8px;
+}
+.report{
+    width: 319px;
+    height: 26px;
+    background-color: #f0f0f0;
+}
+.blue2{
+    float: left;
+    width: 100px;
+    height: 26px;
+    background-color: #084466;
+    margin-left: 70px;
+}
+.blue2 li{
+    list-style: none;
+    text-align: center;
+}
+.blue2 a{
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+.blue2 a:hover{
+    color: #ccc;
+}
+.logo2{
+    float: left;
+    width: 78px;
+    height: 26px;
+    background-color: #f0f0f0;
+    margin-left: 70px;
+}
+.logo2 li{
+    list-style: none;
+}
+.logo2 a{
+    text-decoration: none;
+    color: #c6cce4;
+    cursor: pointer;
+}
+.logo2 a:hover{
+    color: #f4a70c;
+}
+.logo2 img{
+    cursor: pointer;
+}
+.logo2 img:hover{
+    color: #f4a70c;
+}
+.report_btn{
+    width: 319px;
+    height: 184px;
+    background-color: #ffffff;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.news_list2 li{
+    width: 319px;
+    height: 15px;
+    font-size: 13px;
+    line-height: 29px;
+    padding-left: 6px;
+    cursor: pointer;
+    list-style: none;
+}
+.news_list2 li a{
+    float: left;
+    color: black;
+    width: 210px;
+    white-space: nowrap;
+    text-decoration: none;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.news_list2 li a:hover{
+    color: #da0300;
+}
+.news_list2 li span{
+    float: right;
+    margin-right: 10px;
+    color: black;
+}
+.news_list2 li span:hover{
+    color: #da0300;
+}
+
+.more1{
+    width: 316px;
+    height: 210px;
+    background-color: #9b5ae0;
+    float: left;
+    margin-left: 8px;
+    margin-top: 22px;
+}
+.mm{
+    width: 316px;
+    height: 26px;
+    background-color: #ffffff;
+}
+.mmtop{
+    float: left;
+    width: 100px;
+    height: 26px;
+    margin-left: 26px;
+    position: relative;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    
+}
+.ss{
+    float: left;
+    width: 9px;
+    height: 17px;
+    /* background-color: #9b5ae0; */
+    position: relative;
+}
+.ss img{
+    width: 9px;
+    height: 17px;
+    position: absolute;
+    left: 2px;
+    top: 2px;
+}
+
+.mmtop li{
+    list-style: none;
+    text-align: center;
+}
+.mmtop a{
+    text-decoration: none;
+    position: absolute;
+    left: 10px;
+    color: #9f2b17;
+    cursor: pointer;
+}
+.mmlogo{
+    float: left;
+    width: 78px;
+    height: 26px;
+    background-color: #ffffff;
+    margin-left: 100px;
+}
+.mmlogo li{
+    list-style: none;
+}
+.mmlogo a{
+    text-decoration: none;
+    color: #c6cce4;
+    cursor: pointer;
+}
+.mmlogo a:hover{
+    color: #f4a70c;
+}
+.mmlogo img{
+    cursor: pointer;
+}
+.mmlogo img:hover{
+    color: #f4a70c;
+}
+.line{
+    position: absolute;
+    margin-top: 5px;
+}
+.bline{
+    width: 316px;
+    height: 2px;
+    background-color: #8a8a8a;
+    position: absolute;
+    margin-top: 22px;
+}
+.mm_btn{
+    width: 316px;
+    height: 184px;
+    background-color: #ffffff;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.mmnews_list li{
+    width: 316px;
+    height: 15px;
+    font-size: 13px;
+    line-height: 29px;
+    padding-left: 6px;
+    cursor: pointer;
+    list-style: none;
+}
+.mmnews_list li a{
+    float: left;
+    color: black;
+    width: 210px;
+    white-space: nowrap;
+    text-decoration: none;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.mmnews_list li a:hover{
+    color: #da0300;
+}
+.mmnews_list li span{
+    float: right;
+    margin-right: 10px;
+    color: black;
+}
+.mmnews_list li span:hover{
+    color: #da0300;
+}
+.more2{
+    width: 316px;
+    height: 210px;
+    background-color: #c44b0f;
+    float: left;
+    margin-left: 17px;
+    margin-top: 22px;
+}
+.more3{
+    width: 316px;
+    height: 210px;
+    background-color: #c44b0f;
+    float: left;
+    margin-left: 17px;
+    margin-top: 22px;
+}
+.map1{
+    width: 101px;
+    height: 113px;
+    background-color: #f0f0f0;
+    float: left;
+    margin-left: 17px;
+    margin-top: 26px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.map1 img{
+    width: 83px;
+    height: 83px;
+    margin-left: 9px;
+    margin-top: 9px;
+}
+.map1 p{
+    font-size: 10px;
+    margin-left: 12px;
+    
+}
+.map2{
+    width: 745px;
+    height: 175px;
+    background-color: #ffffff;
+    float: left;
+    margin-left: 8px;
+    margin-top: 26px;
+}
+.map2_imgs img{
+    width: 745px;
+    height: 95px;
+}
+.map2_five{
+    width: 745px ;
+    height: 76px;
+    background-color: white;
+    border: 1px dashed #b25353;
+    border-radius: 10px;
+}
+.map2_five img{
+    width: 109px;
+    height: 46px;
+    margin-top: 12px;
+    margin-left: 32px;
+}
+.map3{
+    width: 101px;
+    height: 113px;
+    background-color: #f0f0f0;
+    float: left;
+    margin-left: 8px;
+    margin-top: 26px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.map3 img{
+    width: 83px;
+    height: 83px;
+    margin-left: 9px;
+    margin-top: 9px;
+}
+.map3 p{
+    font-size: 10px;
+    margin-left: 12px;
+}
