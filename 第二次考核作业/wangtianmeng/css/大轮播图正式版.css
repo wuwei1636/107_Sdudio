@@ -1,0 +1,77 @@
+.box{
+    width: 1300px;
+    height: 300px;
+    position: relative;
+}
+.box .box-img img{
+    width: 1300px;
+    height: 300px;
+}
+.box-img{
+    position: absolute;
+    top: 0px;
+    left: 0;
+    opacity: 0;
+    /* 动画效果,淡入淡出 */
+    /* transition: all 4s; */
+}
+.box-img:nth-child(1){
+    opacity: 1;
+}
+.box-left{
+    position: absolute;
+    width: 35px;
+    height: 70px;
+    
+    color: white;
+    top: 125px;
+    border-radius: 0 5px 5px 0;
+    text-align: center;
+    line-height: 70px;
+    font-size: 40px;
+}
+.box-left:hover{
+    background-color: #00000050;
+    color: #fff;
+    cursor: pointer;
+}
+.box-right{
+    position: absolute;
+    width: 35px;
+    height: 70px;
+    
+    color: white;
+    top: 125px;
+    border-radius: 0 5px 5px 0;
+    text-align: center;
+    line-height: 70px;
+    font-size: 40px;
+    right: 0;
+}
+.box-right:hover{
+    background-color: #00000050;
+    color: #fff;
+    cursor: pointer;
+}
+.box-zhiding ul{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.box-zhiding li{
+    width: 50px;
+    height: 14px;
+    border-radius: 10px 10px 10px 10px;
+    background-color:#fff; 
+    float: left;
+    margin-right: 10px;
+}
+.box-zhiding li:hover{
+   background-color: rgb(247, 115, 8);
+   cursor: pointer;
+}
+.box-zhiding{
+    position: absolute;
+    bottom: 30px;
+    right: 600px;
+}

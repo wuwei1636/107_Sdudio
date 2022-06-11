@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script src="js/jquery.min.js"></script>
+		<script src="js/index.js"></script>
+		<!-- 大轮播图 -->
+		
+		<script src="js/indexdog.js"></script>
+		<script src="js/twopoems.js"></script>
+		<script src="js/大轮播图正式版.js"></script>
+		<link rel="stylesheet" href="css/common.css">
+		<link rel="stylesheet" href="css/twopoems.css">
+		<link rel="stylesheet" href="css/大轮播图正式版.css">
+		<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		/* 导航栏开始 */
+		.nav{
+			width: 100%;
+			height: 50px;
+			background-color: lightseagreen;
+			box-shadow: 0 -2px 2px lightseagreen;
+			margin-top: 0px;
+		}
+		
+		.nav ul{
+			list-style: none;
+		}
+		.nav ul li{
+			float: left;
+			width: 150px;
+			height: 50px;
+			background-color: lightseagreen;
+			margin-right: 1px;
+			font-size: 14px;
+			position: relative;
+		}
+		.nav ul li:hover{
+			color: white;
+			background-color: darkorange;
+			animation: changeColor 2s infinite;
+			animation-delay: 3s;
+		}
+		.nav ul li a{
+			text-decoration: none;
+			color: white;
+			display: block;
+			text-align: center;
+			line-height: 50px;
+			font-weight: bold;
+			text-transform: uppercase;
+		}	
+		.nav ul>li:hover ul li {
+			display: block;
+			border-top: 1px solid rgba(72,219,251,0.5);
+		}
+		.nav li ul {
+			display: none;	
+		}
+		.nav li ul>li {
+			float: none;
+			/* margin-left: -40px; */
+		}
+		.nav li:hover ul {
+			display: block;
+		}
+		.nav ul li ul {
+			position: absolute;
+			left: 0;
+			top: 50;
+			width: 150px;
+			z-index: 44;
+			
+		}
+
+		/* 搜索框开始 */
+		form{
+			float: right;
+			width: 200px;
+			
+		}
+		input,button{
+			border: none;
+			outline: none;
+		}
+		.search input{
+			width: 100%;
+			height: 42px;
+			padding-left: 13px;
+			padding-right: 46px;
+			border: 2px solid lightseagreen;
+			border-radius: 5px;
+			background: transparent;
+			top: 0;
+			right:0;
+			margin: 10px -200px;
+		}
+		.search button:before{
+			content: "搜索";font-size: 10px;color: #fff;
+			
+		}
+		.search button{
+			height: 42px;width: 42px;
+			cursor: pointer;
+			background-color: lightseagreen;
+			border-radius: 0 5px 5px 0;
+			width: 60px;
+			top: 0;right: 0;
+			margin: 10px 132px;
+		}
+		/* 搜索框结束 */
+	/* 导航栏结束 */
+		.left{
+			display: inline-block;
+			margin-top: 10px;
+			margin-left: 100px;
+			
+		}
+		.mid{
+			display: inline-block;
+			margin: 30px ;
+		}
+		.right{
+			display: inline-block;
+			margin: 30px 10px;
+		}
+
+		/* 大的轮播图开始 */
+		.imgs {
+			overflow: hidden;
+            width: 100%;
+	        height: 300px;
+            position: relative;
+            background-color: white;
+           
+		}
+		.imgs ol {
+			position: absolute;
+			bottom: 15px;
+			right: 500px;
+			margin: 0;
+			
+		} 
+		.imgs ol li {
+			width: 50px;
+			height: 17px;
+			background-color: red; 
+			/* 可以改成透明的 */
+			list-style: none;
+			display: inline-block;
+			border-radius: 2px;
+			cursor: pointer;
+		} 
+		.imgs img { 
+            /* 本来是100% */
+			/* background-size: cover; */
+			/* overflow: hidden; */
+            width: 100%;
+            height: 300px;
+        }
+
+		.imgs ul {
+			overflow: hidden;
+			width: 650%;
+			margin-left: -100%;
+		}
+		.imgs ul li {
+			float: left;
+			width: 20%;
+		} */
+		.imgs ul {
+            list-style: none;
+        }
+        
+        .imgs img {
+            vertical-align: top;
+			width: 100%;
+			height: 300px;
+        } 
+        /* 大的轮播图结束 */
+		.lis li {
+			margin-top: 250px;
+		}
+		.left>a {
+			color: white;
+			float: left;
+			text-decoration: none;
+			display: block;
+			background-color: orangered;
+			border-radius: 20px 0 0 0;
+			/* 边框变圆滑 */
+			width: 50%;
+			height: 50px;
+			text-align: center;
+			line-height: 50px;
+		}
+		.left ul li {
+			list-style: none;
+			
+		}
+		.left .max {
+			background-color: #FF8C00;
+			border-radius: 0 20px 0 0;
+		}
+		.left .min {
+			position: absolute;
+			top: 50px;
+			left: 0;
+			display: none;
+			width: 100%;
+		}
+		.left {
+			position: relative;
+			border: 2px solid lightgray;
+			
+			width: 450px;height: 300px;
+			background-color: white;
+			border-radius: 20px 20px 0 0;
+		}
+		.left .min li a {
+			text-decoration: none;
+			color: black;
+			font-style: none;
+			font-size: 13px;
+		}
+		.left .poem li a {
+			text-decoration: none;
+			color: black;
+			font-style: none;
+			font-size: 13px;
+		}
+		.left .poem li:hover a {
+			color: red;	
+		}
+		.left .poem li .date {
+			float: right;			
+		}
+		.left .min li .date {
+			float: right;			
+		}
+		.left a:hover {
+			color: red;
+		}
+		.left .poem {
+			position: absolute;
+			top: 50px;
+			left: 0;
+			width: 100%;
+		}
+		/* 春晓开始 */
+		.right{
+			width: 300px;
+            height: 290px;
+            border: 1px solid red;
+			float: right;
+			margin-top: 0px;
+			margin-right: 0px;
+			box-shadow: darkgrey 10px 10px 30px 5px;
+            border: 2px solid orange;
+		}
+		#word{
+			list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+		}
+		#word li {
+			margin-bottom: 0px;
+            background-color: Orange;
+            font-size: 20px;
+            font-weight: bolder;
+            cursor: pointer;
+			color: white;
+		}
+		#word li ul {
+			list-style-type: none;
+            margin: 0;
+            padding: 0;
+		}
+		#word li ul li {
+			background-color: white;
+			color: black;
+		}
+		/* 春晓结束 */
+		.banxin{
+			margin: 0 auto;
+			width: 1300px;
+			height: 330px;
+			position: relative;
+			/* background-color: rgb(236, 29, 64); */
+		}
+		.encourage ul {
+			margin-right: 300px;
+			margin-top: 40px;
+			float: right;	
+		}
+		.encourage ul p {
+			height: 55px;
+		}
+		.div{
+			
+			margin: 0 auto;
+			width: 1300px;
+			height: 200px;
+		    /* background-color: pink; */
+
+		}
+		.dog{
+            width: 530px;
+            height: 170px;
+            background-color: pink;
+            margin: 0 auto;
+			float: right;
+            margin-right: 100px;
+			margin-top: -225px;
+            box-shadow: darkgrey 10px 10px 30px 5px;
+            border: 2px gray;
+        }
+		.image_normal{
+            width: 250px;
+            height: 80px;
+        }
+        .image_large{
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: rgba(0,0,0,0.3);
+            z-index: 100;
+            display: none;
+        }
+        .image_large{
+            z-index: 999;
+        }
+        .bottom{
+            position: relative;
+            overflow: hidden;
+            /* margin: 100px auto; */
+            /* 六张图片宽126，高100 */
+            width: 598px;
+			height: 170px;
+			background-color: white;
+			margin: 55px ;
+			border: 2px solid orange;
+			float: left;	
+			margin-top: -30px;
+        }
+
+		.bottom > .list {
+			position: absolute;
+			left: 0;
+			display: flex;
+			align-items: center;
+		}
+		.before, .after{
+		position: absolute;
+		/* top: 125px; */
+		top: 50%;
+		/* left: 0px; */
+		margin-top: -15px;
+		
+		width: 18px;
+		height: 40px;
+		background: white;
+		text-align: center;
+		font-size: 25px;
+		line-height: 30px;
+		color: gray;
+		text-decoration: none;
+	}
+	.before {
+		left: 20px;
+	}
+	.after{
+		right: 14px;
+	}
+			
+	.jiantou {
+		font-size: 24px;
+		text-decoration: none;
+		display: block;
+		text-align: center;
+		width: 20px;
+		height: 30px;
+		line-height: 30px;
+		background-color: rgba(158,154,154,0.7);
+		color: while;
+		z-index: 999;
+	}
+	.last, .next{
+		position: absolute;
+		top: 50%;
+		margin-top: -15px;
+		width: 50px;
+		height: 50px;
+		text-align: center;
+		font-size: 50px;
+		line-height: 30px;
+		color: #fff;
+		text-decoration: none;
+	}
+	.last {
+		left: 10px;
+		border-top-right-radius: 15px;
+		border-bottom-right-radius: 15px;
+	}
+	.next{
+		right: 10px;
+		border-top-left-radius: 15px;
+		border-bottom-left-radius: 15px;
+	}
+	.list img{
+		width: 126px;
+		height: 170px;
+		margin-left: 20px;
+	}
+	.bottom .list{
+		width: 600%;
+	}
+	.list div {
+		float: left;
+		list-style: none;
+	}
+	.lis{
+		position: absolute;
+		margin-top: 0px;
+		width: 330px;
+		height: 50px;
+		border-radius: 7px;
+		background: rgba(0,0,0,0.3);
+		border-radius: 20px 20px 0 0;
+	}
+	.point{
+		margin-top: -968px;
+		margin-left: 480px;		
+	}
+	.point .lis li {
+		width: 8px;
+		height: 8px;
+		text-align: center;
+		margin: 15px 35px;
+		border-radius: 50%;
+		background-color: #fff;
+		cursor: pointer;
+		list-style: none;
+	}
+	.lis .selected{
+		background-color: rgba(0,0,0,0.3);
+	}
+	.happy{
+		margin: 0 auto;
+		width: 1300px;
+	}
+	.hope {
+		margin: 0 auto;
+		width: 1300px;
+		height: 200px;
+	}
+	.lunbo{
+		margin: 0 auto;
+		width: 2000px;
+		height: 200px;
+		background-color: pink;
+	}
+	.tel{		
+		float: right;
+		margin-right: 400px;
+		margin-top: 0px;
+		line-height: 40px;
+		/* background-color: plum; */
+	}
+	.tel p{
+		cursor: pointer;
+	}
+	.tel p:hover{
+		color: red;
+	}
+	.light {
+		margin: 0 auto;
+		width: 1300px;
+	}
+	.threepoems{
+		width: 300px;
+		height: 300px;
+		float: left;
+		margin-top: 20px;
+		margin-left: 25px;
+	}
+		</style>
+		<script>
+			$(function() {
+				$("#word ul").hide();
+				$("#word>li").click(function() {
+					$(this).find("ul").show(500);
+					//.find("ul")子孙选择器  也可以用子代选择器children
+					$(this).siblings("li").find("ul").hide(500)
+				})
+			})
+		</script>
+	</head>
+	<body style="margin: 0;padding: 0;"><!-使页面与上、左右没有空隙>
+	<!-- 版新开始 -->
+<div class="happy">
+	<!-- 最上边开始 -->
+	<div class="search" style="width: 100%;height: 100px;background-color: orange;">
+		<img src="images/QQ图片20220406102056.png" style="width: 500px;height: 100px;margin-left: 100px;">
+		<form>
+			<input type="test" placeholder="站内搜索">
+			<button type="submit"></button>
+		</form>
+	</div>
+	<!-- 最上边结束 -->
+
+	<!-- 导航栏开始 -->
+		<div class="nav">
+		<ul>
+			<li ><a href="#">首页</a></li>
+			<li><a href="#">中心简介</a>
+				<ul>
+					<li><a href="">部门设置</a></li>
+					<li><a href="">中心任务</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="#">中心动态</a>
+				<ul>
+					<li><a href="">中心动态</a></li>
+					<li><a href="">最新通知</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="#">教师培训</a>
+				<ul>
+					<li><a href="">基础课程培训</a></li>
+					<li><a href="">专业课程培训</a></li>
+					<li><a href="">数字技能培训</a></li>
+					<li><a href="">数字工作坊</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="#">教学研究</a>
+				<ul>
+					<li><a href="">科研项目</a></li>
+					<li><a href="">教学成果</a></li>
+					<li><a href="">教学研讨会</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="#">资源中心</a>
+				<ul>
+					<li><a href="">校内视频资源</a></li>
+					<li><a href="">校外视频资源</a></li>
+					<li><a href="">慕课资源</a></li>
+					<li><a href="">其他资源</a></li>
+				</ul>
+			</li>
+			<li><a href="#">咨询服务</a></li>
+		</ul>	
+	</div>
+	<!-- 导航栏结束 -->
+
+	<!-- 大轮播图开始 -->
+	<!-- <div class="imgs" id="screen" >
+			<ul >
+			<li><img src="QQ图片4.jpg" ></li>
+			<li ><img src="QQ图片河南大学.jpg" ></li>
+			<li><img src="QQ图片2.jpg" ></li>
+			<li><img src="QQ图片3.jpg" ></li>
+			<li><img src="QQ图片4.jpg" ></li>
+			<li ><img src="QQ图片河南大学.jpg" ></li>
+		</ul>
+			<ol>
+                <li class="current"></li>
+                <li></li>
+                <li></li>
+                <li></li>
+		    </ol>
+	</div> -->
+
+	<div class="box">
+		<div class="box-img"><img src="images/QQ图片河南大学.jpg" alt=""></div>
+		<div class="box-img"><img src="images/QQ图片2.jpg" alt=""></div>
+		<div class="box-img"><img src="images/QQ图片3.jpg" alt=""></div>
+		<div class="box-img"><img src="images/QQ图片4.jpg" alt=""></div>
+		<div class="box-left">&lt;</div>
+		<div class="box-right">&gt;</div>
+		<div class="box-zhiding">
+			<ul>
+				<li class="botton1"></li>
+				<li class="botton1"></li>
+				<li class="botton1"></li>
+				<li class="botton1"></li>
+			</ul>
+		</div>
+	</div>
+	<!-- 大轮播图结束 -->
+
+	<!-- 版新中间三个盒子开始 -->
+<div class="banxin">
+	<!-- 左边两首诗开始 -->
+	<div class="water">
+	<div class="nav1">
+        <ul>
+            <li title="#div1">水调歌头</li>
+            <li title="#div2">满江红·写怀</li>
+        </ul>
+    </div>
+    <div class="content">
+        <div class="con" id="div1">
+            <p>明月几时有？把酒问青天。&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2019年3月12日</p>
+            <p>不知天上宫阙，今夕是何年。&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2019年3月12日</p>
+            <p>我欲乘风归去，又恐琼楼玉宇，高处不胜寒。
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2019年3月12日</p>
+            <p>起舞弄清影，何似在人间。&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2019年3月12日</p>
+            <p>转朱阁，低绮户，照无眠。&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2019年3月12日</p>
+            <p>不应有恨，何时长向别时圆？&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2019年3月12日</p>
+        </div>
+        <div class="con" id="div2">
+            <p>怒发冲冠，凭栏处、潇潇雨歇。&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2019年3月12日</p>
+            <p>抬望眼、仰天长啸，壮怀激烈。&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2019年3月12日</p>
+            <p>三十功名尘与土，八千里路云和月。&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2019年3月12日</p>
+            <p>莫等闲、白了少年头，空悲切。&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2019年3月12日</p>
+            <p>靖康耻，犹未雪。臣子恨，何时灭。&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2019年3月12日</p>
+            <p>驾长车，踏破贺兰山缺。&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2019年3月12日</p>
+        </div>
+       
+    </div>
+	</div>
+	<!-- 左边两首诗结束 -->
+
+	<!-- 中间小图大图开始 -->
+<div class="picture">
+	<div class="container">
+        <ul>
+            <li><img src="images/QQ图片片1.1.jpg" alt=""></li>
+            <li><img src="images/QQ图片片2.jpg" alt=""></li>
+            <li><img src="images/QQ图片片3.jpg" alt=""></li>
+            <li><img src="images/QQ图片片4.jpg" alt=""></li>
+            
+            <li class="big-img"></li>
+            <li class="frame"></li>
+        </ul>
+    </div>
+</div>	
+<!-- 中间小图大图结束 -->
+
+<!-- 右边三首诗开始 -->
+<div class="threepoems">
+	<div class="right" >
+			<ul id="word">
+				<li>
+					春晓
+					<ul>
+						<li>春眠不觉晓</li>
+						<li>处处闻啼鸟</li>
+						<li>夜来风雨声</li>
+						<li>花落知多少</li>
+					</ul>
+				</li>
+				<li>
+					夜雨寄北
+					<ul>
+						<li>君问归期未有期</li>
+						<li>巴山夜雨涨秋池</li>
+						<li>何当共剪西窗烛</li>
+						<li>却话巴山夜雨时</li>
+					</ul>
+				</li>
+				<li>
+					清明
+					<ul>
+						<li>清明时节雨纷纷</li>
+						<li>路上行人欲断魂</li>
+						<li>借问酒家何处有</li>
+						<li>牧童遥指杏花村</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+</div>
+<!-- 右边三首诗结束 -->
+
+<!-- 版新下边狗和小轮播图开始 -->
+	<div class="div">
+		<!-- 小轮播图开始 -->
+        <div class="bottom">
+			<a href="#" class="before">&lt;</a>
+			<a href="#" class="after">&gt;</a>
+			<div class="list">
+				<div ><img src="images/1.jpg" ></div>
+				<div ><img src="images/2.jpg" ></div>
+				<div ><img src="images/3.jpg" ></div>
+				<div ><img src="images/4.jpg" ></div>
+				<div ><img src="images/5.jpg" ></div>
+				<div ><img src="images/6.jpg" ></div>
+			</div>
+		</div>
+		<script>
+			let list=document.querySelector('.list')
+			let box=document.querySelector('.bottom')
+	
+			list.innerHTML+=list.innerHTML
+			let left=0
+	
+			let timer
+	
+			function move(){
+				clearInterval(timer)
+				timer=setInterval(function(){
+				left-=2
+				if(left===-840){
+					left=0
+				}
+				list.style.left=left+'px'
+			},40)
+			}
+			
+		move()
+			box.onmouseinter=function(){
+				clearInterval(timer)
+			}
+			box.onmouseleave=function(){
+				move()
+			}
+		</script>
+		<!-- 小轮播图结束 -->
+
+		<!-- 小狗开始 -->
+		<div class="dog">
+			<img src="images/dog7.jpg" class="image_normal" style="margin-right:10px; margin-left: 5px;">
+			<img src="images/dog8.jpg" class="image_normal">
+			<img src="images/dog9.jpg" class="image_normal" style="margin-right:10px; margin-left: 5px;">
+			<img src="images/dog10.jpg" class="image_normal">
+			
+			<div class="image_large"></div>
+		</div>
+		<!-- 小狗结束 -->
+	</div>
+<!-- 版新下边狗和小轮播图结束 -->
+
+<!-- 版新最下边开始 -->
+<div class="hope">
+	<div class="encourage" style="width: 100%;height: 200px;background-color: orange;">
+		  <img src="images/QQ图片加油.png" style="width: 350px;height: 220px;margin-left: 170px;margin-top: -40px;">
+		<div class="tel" >
+			<p>联系电话： 137976707017</p>
+			<p>地址： 河南省开封市河南大学金明校区</p>
+			<p>技术支持： 河南大学107网站工作室</p>
+		</div>
+		
+	</div>
+</div>
+	<!-- 版新最下边结束 -->
+	</body>
+</html>

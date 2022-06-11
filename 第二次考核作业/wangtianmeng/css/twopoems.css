@@ -1,0 +1,55 @@
+/* *{
+    margin: 0;
+    padding: 0;
+    
+} */
+.water{
+    width: 450px;
+    height: 300px;
+    background-color: white; 
+    float: left;
+    margin-left: 50px;
+    margin-top: 20px;
+}
+.nav1{
+    border-radius: 20px ;
+    
+    
+}
+.nav1 ul {
+    display: flex;
+    list-style: none;
+}
+.nav1 li{
+    width: 225px;
+    height: 40px;
+    background-color: orange;
+    color: white;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+}
+
+.nav1 li:hover{
+    background-color: orangered;
+}
+.con{
+    width: 450px;
+    height: 253px;
+    background-color: white;
+    border: 2px solid gray;
+    display: none;
+    box-shadow: darkgrey 10px 10px 30px 5px;
+    border: 2px gray;
+}
+.con:first-child{
+    display: block;
+} 
+.con p{
+    cursor: pointer;
+    font-size: 10px;
+    line-height: 23px;
+}
+.con p:hover{
+    color: red;
+}

@@ -1,0 +1,148 @@
+.w2{
+    width: 1355px;
+    height: 2020px;
+    margin: auto;
+    background-color: white;
+    margin-top: 46px;
+}
+.load{
+    width: 1355px;
+    height: 2020px;
+}
+.left{
+    float: left;
+    width: 240px;
+    height: 877px;
+    background-color: bisque;
+}
+.ziliao{
+    width: 240px;
+    height: 43px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+.ziliao h1{
+    color: #870813;
+}
+.line{
+    width: 240px;
+    border: 1px dashed #b25353;
+}
+.nav1{
+    width: 240px;
+    height: 284px;
+    background-color: #f4f4f4;
+    text-align: center;
+    
+}
+.nav1 ul{
+    list-style: none;
+}
+.nav1 ul li{
+    width: 240px;
+    cursor: pointer;
+}
+.nav1 li a{
+    text-decoration: none;
+    color: black;
+    width: 240px;
+    font-size: 20px;
+    line-height: 40px;
+    cursor: pointer;
+}
+.nav1 li:hover{
+    background-color: #870813;
+    color: white;
+    font-weight: bolder;
+}
+.nav1 li a:hover{
+    background-color: #870813;
+    color: white;
+    font-weight: bolder;
+}
+.photo{
+    width: 240px;
+    height: 224px;
+    background-color: #ec5b17;
+}
+.photo img{
+    width: 240px;
+    height: 224px;
+}
+.nav2{
+    width: 240px;
+    height: 236px;
+    background-color: #f4f4f4;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.nav2 ul{
+    list-style: none;
+}
+.nav2 ul li{
+    width: 240px;
+    cursor: pointer;
+}
+.nav2 li a{
+    text-decoration: none;
+    color: black;
+    width: 240px;
+    font-size: 20px;
+    line-height: 40px;
+    cursor: pointer;
+}
+.nav2 li:hover{
+    background-color: #870813;
+    color: white;
+    font-weight: bolder;
+}
+.nav2 li a:hover{
+    background-color: #870813;
+    color: white;
+    font-weight: bolder;
+}
+
+.right{
+    float: left;
+    width: 1090px;
+    height: 3300px;
+    margin-left: 23px;
+    position: relative;
+}
+.house{
+    width: 1090px;
+    height: 56px;
+    position: relative;
+}
+.house img{
+    position: absolute;
+    width: 40px;
+    height: 33px;
+    top: 14px;
+    left: 11px;
+}
+.house_t{
+    width: 445px;
+    height: 35px;
+    float: left;
+    margin-left: 75px;
+    margin-top: 18px;
+    color: black;
+    font-size: 23px;
+}
+.house_t a{
+    list-style: none;
+    text-decoration: none;
+    color: black;
+}
+.line1{
+    width: 1090px;
+    border: 2px dashed #b25353;
+}
+
+.house_con img{
+    margin-top: 50px;
+    width: 500px;
+    height: 500px;
+}
