@@ -1,0 +1,9 @@
+git init
+git add .
+ git commit -m " FOR TEST "
+git push
+git clone https://github.com/ZhengQiushi/opencv.git
+git checkout -b my_3.4
+git pull origin 3.4
+git checkout 3.4
+
