@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery.js"></script>
+    <style>
+        .one{width:85%;height:110px;background-color: #F6AB02;margin:0 auto;text-decoration: none;margin-bottom:0px;}
+        .search{
+            float:right;
+            padding-top:40px;
+            padding-right:10%;
+            margin:0;
+            
+        }
+        input{
+            border:none;
+            outline:none;
+            background:none;
+        }
+        .text{
+            float:left;
+            width:150px;
+            height:30px;
+            border:2px solid #01ACB7;
+            color:grey;
+            border-top-left-radius: 20px;
+            border-bottom-left-radius: 20px;
+            cursor:pointer;
+            
+        }
+        .button{
+            width:50px;
+            height:36px;
+            border:0;
+            float:left;
+            color:white;
+            background-color: #01ACB7;
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 20px;
+        }
+        .two{width:85%;height:50px;background-color: #01ACB7;margin:0 auto;margin-top:-17px;}
+        .three{width:85%;height:550px;margin:auto;position:relative;margin-top:-17px;}
+        .four{width:85%;height:400px;text-align:center;background-color: white;}
+        .five{width:85%;height:150px;margin-top:-50px;}
+        .six{width:85%;height:110px;background-color:#F6AB02;margin:0 auto;line-height:20px;}
+        .two ul{list-style:none;margin-left:150px;position: relative;}
+        .two ul li {
+            display:block;
+            margin-right:5px;
+            height:50px;
+            width:100px;
+            float:left;
+            z-index:100;
+        }
+        .two ul li a:hover{background-color: #ED6B0E;
+        }
+        .two ul li a{
+            color:white;
+            float:left;
+            text-decoration: none;
+            line-height:50px;
+            width:100px;
+            text-align:center;
+            
+        }
+        .two ul li ul{list-style:none;margin-left:-42px;display:none;z-index:100;}
+        .two ul li ul li{z-index:100;}
+        .two ul li ul li a{
+            border:1px solid #01ACB7;
+            background-color: #01ACB7;
+            height:50px;width:100px;
+            text-align:center;
+            z-index:100;
+        }
+       
+       .three ul{width:85%;height:480px;}
+       .three ul li{position:absolute;left:0;top:0;display:none;}
+       .three ul li.active{display:block;}
+       .three span{width:50px;
+            height:70px;
+           
+            color:white;
+            text-align:center;
+            line-height:70px;
+            position:absolute;
+            top:50%;
+            font-weight:bolder;
+            transform:translateX(-50%);
+            cursor:pointer;
+            font-family:"宋体";
+            font-size:50px;
+        }
+        .three .left{left:25px;}
+        .three .right{right:-25px;}
+        .dots{
+            left:50%;
+            margin:0 auto;
+            position:absolute;
+            
+            bottom:15px;
+            text-align: left;
+            transform: translateX(-50%);
+        }
+      
+        .dots li{
+            width:40px;
+            height:15px;
+            background-color: grey;
+            float:left;
+            border-radius:30%;
+            margin:0 20px;
+            box-shadow:0 0 5px rgba(0,0,0,0.2);
+            cursor:pointer;
+            display:block;
+        }
+        .dots li.active{background-color:#ED6B0E}
+
+
+        .four1{float:left;width:25%;height:370px;margin-top:0px;margin-left:200px;text-align:center;border-color: white;}
+        .four2{float:left;width:30%;
+               height:370px;
+               margin-top:5px;
+               text-align:center;
+               margin-left:100px;}
+        .four3{width:230px;
+            height:195px;
+            margin-top:10px;
+            text-align:left;
+            margin-left:10px;
+            float:right;
+            line-height:20px;
+            margin-right:-20px;
+            background-color:white;
+            border:3px solid #F6AB02;}
+        .four11{height:40px;width:400px;background-color: white;}
+        .four111{text-align:center;border-top-left-radius:10px;background-color:#ED6B0E;color:white;font-size:15px;width:50%;height:40px;}
+        .four112{text-align:center;border-top-right-radius:10px;background-color:#F6AB02;color:white;font-size:15px;width:50%;height:40px;}
+        .four11 ul li{float:left;display:inline-block;}
+        .four11 ul li a{color:white;text-decoration:none;line-height: 40px;margin: auto;text-align:center;}
+        .left{float:left;font-size:5px;}
+        .right{float:right;font-size:5px;}
+        .four12{width:358px;margin-left:42px;margin-top:-15px;border-color:grey;height:240px;font-size:15px;line-height:30px;}
+        .four12 ul{margin-left:-25px;}
+        .four121 li{display:block;text-decoration: none;}
+        .four121 li a{color:black;text-decoration: none;display:inline-block;}
+        .four122{display:none;}
+        .four122 li{list-style: none;}
+        .four122 li a{color:black;text-decoration: none;}
+        .four121 li a:hover{color:red;}
+        .four122 li a:hover{color:red;}
+        #container{position:absolute;
+               left:55%;
+               transform:translate(-50%,-50%);
+               width:25%;
+               height:190px;
+               margin-top:150px;
+               border:3px solid #F6AB02;
+               padding:50px;
+               border-radius:5px;
+               background-color: white;
+               text-align:center;
+               padding-left:10px;
+               padding-right:10px;
+               }
+       .four2l{
+              width:100%;
+              height:200px;
+              overflow:hidden;
+              margin-top:-45px;
+              margin-left:20px;
+            }
+            .picture{width:500px;
+                height:300px;
+               
+               
+                animation:switch 8s ease-out infinite;
+                transition-duration: 1s;
+                margin-top:-100px;
+            }
+       .picture img{
+            float:left;
+            width:350px;
+            height:280px;
+            max-width:100%;
+            max-height:100%;
+            
+       }
+       @keyframes switch{
+            0%,25%{margin-left:0;}
+            35%,60%{margin-left:-300px;}
+            70%,95%{margin-left:-600px;}
+            100%{margin-left:0;}
+        }
+       .button1{
+            padding-top:6px;
+            width:330px;
+            height:70px;
+            text-align:center;
+            margin-left:20px;
+            background-color: white;
+            }
+        .button1 img{
+            display:inling-block;
+            cursor:pointer;
+            width:77px;
+            height:50px;
+            border:0.5px solid white;
+            
+        }
+        
+        .four2 .picture .active1{display:block;}
+        .four2 .button1 .active{border-color: #ED6B0E;}
+        .four3 ul{margin-left:-40px;margin-top:-1px;width:231px;}
+        .four3 ul li{background-color: #F6AB02;color:white;font-size:20px;display:block;}
+        .four3 ul li ul li{color:black;background-color:white;display:block;font-size:13px;line-height:35px;}
+        .four31 li{cursor:pointer;}
+        .five1{width:60%;height:150px;float:left;border:2px solid #F6AB02;border-radius:5px;margin-left:250px;margin-top:-70px;}
+        .five span{
+            width:17px;
+            height:22px;
+            color:black;
+            font-size:20px;
+            cursor:pointer;
+            position:absolute;
+            top:143%;
+            background-color: white;
+            border:1px solid white;
+        
+        }
+        .five .left{left:15%;}
+        .five .right{right:35.5%;}
+        .five2{width:25%;height:130px;float:right;margin-left:450px;margin-top:-150px;margin-right:-80px;}
+        .none{display:none;}
+        .six1{margin-right:400px;float:right;}
+        .six1 p a{font-size:15px;color:black;text-decoration:none;}
+        .six1 p a:hover{color:red;}
+        .six img{float:left;margin-left:400px;}
+    </style>
+   
+
+</head>
+<body>
+   
+    <div class="one">
+   <img src="logo.png" alt=""height=110px>
+   
+   <div class="search">
+    <input type="text" value="站内搜索" class="text" id="shuyu" onfocus="myfunc()">
+    <button class="button">搜索</button>
+    <script>
+        function myfunc(){
+            var res=$('#shuyu').val();
+            if(res=='站内搜索'){
+                $('#shuyu').val('');
+                $('#shuyu').css('border','2px solid #01ACB7');
+            }
+
+        }
+    </script>
+   </div>
+    </div>
+    <div class="two">
+        <ul class="two1">
+            <li><a href=" ">首页</a></li>
+            <li><a href="">中心简介</a> 
+            <ul>
+                <li><a href="">部门设置</a></li>
+                <li><a href="">中心任务</a></li>
+            </ul>
+            </li>
+            <li><a href="">中心动态</a>
+            <ul>
+                <li><a href="">中心动态</a></li>
+                <li><a href="">最新通知</a></li>
+            </ul>
+            </li>
+            <li><a href="">教师培训</a>
+                <ul>
+                    <li><a href="">基础课程培训</a></li>
+                    <li><a href="">专业课程培训</a></li>
+                    <li><a href="">教学技能培训</a></li>
+                    <li><a href="">教学工作坊</a></li>
+                </ul>
+            </li>
+            <li><a href="">教学研究</a>
+            <ul>
+                <li><a href="">科研项目</a></li>
+                <li><a href="">教学成果</a></li>
+                <li><a href="">教学研讨会</a></li>
+            </ul>
+            </li>
+            <li><a href="">资源中心</a>
+            <ul><li><a href="">校内视频资源</a></li>
+                <li><a href="">校外视频资源</a></li>
+                <li> <a href="">慕课资源</a></li>
+                <li><a href="">其他资源</a></li>
+            </ul>
+            </li>
+           <li>
+               <a href=" ">咨询服务</a>
+           </li>
+        </ul>
+        <script>
+            $(function(){
+                $(".two1>li").mouseover(function(){
+                    $(this).children("ul").show();
+                });
+                $(".two1>li").mouseout(function(){
+                    $(this).children("ul").hide();
+                })
+            })
+        </script>
+    </div>
+    <div class="three">
+        <ul>
+            <li class="active"><img src="banner1.jpg" alt="" width=100% height=550px></li>
+            <li><img src="banner2.jpg" alt="" width=100% height=550px></li>
+            <li><img src="banner3.jpg" alt="" width=100% height=550px></li>
+            <li><img src="banner4.jpg" alt="" width=100% height=550px></li>
+        </ul>
+        <span class="left">&lt;</span>
+        <span class="right">&gt;</span>
+        <ol class="dots">
+            <li class="active"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ol>
+    </div>
+    <script>
+        var $oThree=$('.three');
+        var $aLis=$('.three ul li');
+        var $oLeft=$('.three .left');
+        var $oRight=$('.three .right');
+        var $aDots=$('.three .dots li');
+        var timer=null;
+        var num=0;
+            function autoPlay(){
+            timer=setInterval(function(){
+                num++;
+                num=num%$aLis.length;
+                $aLis.eq(num).stop().fadeIn(1000).siblings().fadeOut(1000);;
+                $aDots.eq(num).addClass('active').siblings().removeClass('active');
+            },3000);
+        }
+        autoPlay();
+        $oThree.hover(function(){
+            clearInterval(timer);
+        },function(){
+            autoPlay();
+          
+        });
+        $oLeft.click(function(event){
+            num--;
+            num=num%$aLis.length;
+            $aLis.eq(num).stop().fadeIn(1000).siblings().fadeOut(1000);;
+            $aDots.eq(num).addClass('active').siblings().removeClass('active');
+        });
+        $oRight.click(function(event){
+            num++;
+            num=num%$aLis.length;
+            $aLis.eq(num).stop().fadeIn(1000).siblings().fadeOut(1000);;
+            $aDots.eq(num).addClass('active').siblings().removeClass('active');
+        });
+        $aDots.click(function(event){
+            var index=$(this).index();
+            num=index;
+            $aLis.eq(num).stop().fadeIn(1000).siblings().fadeOut(1000);;
+            $aDots.eq(num).addClass('active').siblings().removeClass('active');
+        });
+    </script>
+    <div class="four">
+        <div class="four1">
+            <div class="four11">
+                <ul>
+                    <li class="four111"><a href="#">水调歌头</a></li>
+                    <li class="four112"><a href="#">满江红·写怀</a></li>
+            </div>
+            <div class="four12">
+            <ul class="four121">
+                <li><a href="" class="left">明月几时有？把酒问青天。</a><a href=""class="right">2019年3月12日</a></li>
+                <li><a href=""class="left">不知天上宫阙，今夕是何年</a><a href=""class="right">2019年3月12日</a></li>
+                <li><a href=""class="left">我欲乘风归去，又恐琼楼玉宇，高处不胜寒。</a><a href=""class="right">2019年3月12日</a></li>
+                <li><a href=""class="left">起舞弄清影，何似在人间。</a><a href=""class="right">2019年3月12日</a></li>
+                <li><a href=""class="left">转朱阁，低绮户，照无眠。</a><a href=""class="right">2019年3月12日</a></li>
+                <li><a href=""class="left">不应有恨，何事长向别时圆？</a><a href=""class="right">2019年3月12日</a></li>
+            </ul>
+            <ul class="four122">
+                <li><a href=""class="left">怒发冲冠，凭栏处，潇潇雨歇</a><a href=""class="right">2019年3月12日</a></li>
+                <li><a href=""class="left">拾望眼，仰天长啸，壮同激烈。</a><a href=""class="right">2019年3月12日</a></li>
+                <li><a href=""class="left">三十功名尘与土，八千里路云和月。</a><a href=""class="right">2019年3月12日</a></li>
+                <li><a href=""class="left">莫等闲，白了少年头，空悲切！</a><a href=""class="right">2019年3月12日</a></li>
+                <li><a href=""class="left">靖康耻，犹未雪，臣子憾，何时灭！</a><a href=""class="right">2019年3月12日</a></li>
+                <li><a href=""class="left">驾长车，踏破贺兰山缺。</a><a href=""class="right">2019年3月12日</a></li>
+            </ul>
+            </div>
+        </div>
+        <script>
+        $(function(){
+            $(".four111").click(function(){
+            $(".four121").show();$(".four122").hide();
+            $(".four111").css('background-color','#ED6B0E');$(".four112").css('background-color','#F6AB02');
+            });
+            $(".four112").click(function(){
+            $(".four122").show();$(".four121").hide();
+            $(".four111").css('background-color','#F6AB02');$(".four112").css('background-color','#ED6B0E');
+            });
+        })
+        </script>
+        <div class="four2">
+            <div id="container">
+                <div class="four2l">
+                    <div class="picture">
+                        <img src="img1.jpg" alt="" class="active1">
+                        <img src="img2.jpg" alt="">
+                        <img src="img3.jpg" alt="">
+                        <img src="img4.jpg" alt="">
+            
+                    </div>
+            
+                </div>
+                <div class="button1">
+                        <img src="img1.jpg" alt="" class="active1">
+                        <img src="img2.jpg" alt="">
+                        <img src="img3.jpg" alt="">
+                        <img src="img4.jpg" alt="">
+            
+                </div>
+                <script>
+                    $(function(){
+                      $(".button1 img").click(function(){
+                        var index=$(this).index();
+                        console.log(index);
+                        $(".picture img").eq(index).show();
+                        $(".picture img").eq(index).siblings().hide();
+                      })
+                    })
+                     window.onload=function(){
+                    var button1=document.getElementsByClassName("button1");
+                    var btn =button1[0].getElementsByTagName("img");
+                    var picture=document.getElementsByClassName("picture");
+                    function reAnimaton(){
+                        for(let j=0;j<btn.length;j++){
+                            btn[j].style.borderColor="white";
+            
+                        }
+                        picture[0].style.animation="switch Bs ease-out infinite";
+                    }
+                    for(let i=0;i<btn.length;i++){
+                        btn[i].onclick=function(){
+                            for(let j=0;j<btn.length;j++){
+                    btn[j].style.borderColor="white";
+                    
+                }
+                
+            }
+            btn[i].index=i;
+                picture[0].style.animation="none";
+                picture[0].style.marginleft=-i*300+"px";
+                btn[i].style.borderColor="#000000";
+               setTimeout(reAnimation,5000);
+        }
+    }
+                       
+                </script>
+            
+            </div>
+           
+        </div>
+        <div class="four3">
+            <ul class="four31">
+                <li>春晓
+                    <ul>
+                        <li>春眠不觉晓</li>
+                        <li>处处闻啼鸟</li>
+                        <li>夜来风雨声</li>
+                        <li>花落知多少</li>
+                    </ul>
+                </li>
+                <li>夜雨寄北 
+                   <ul  style="display:none">
+                    <li>君问归期未有期</li>
+                    <li>巴山夜雨涨秋池</li>
+                    <li>何当共剪西窗烛</li>
+                    <li>却话巴山夜雨时</li>
+                   </ul>
+                </li>
+                <li>清明
+                   <ul  style="display:none">
+                    <li>清明时节雨纷纷</li>
+                    <li>路上行人欲断魂</li>
+                    <li>借问酒家何处有</li>
+                    <li>牧童遥指杏花村</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    
+    <script>
+        $(function(){
+            $(".four31>li").click(function(){
+                $(this).children("ul").slideToggle().siblings("ul").slideUp();
+        });
+        $(".four31>li").click(function(){
+            $(this).css('background-color','#ED6B0E').siblings().css('background-color','#F6AB02')
+        });
+        })
+    </script>
+       
+    </div>
+    <div class="five">
+        <div class="five1">
+            
+                <img src="1.jpg" alt="" height=150px width="24%">
+                <img src="2.jpg" alt="" height=150px width="24%">
+                <img src="3.jpg" alt="" height=150px width="24%">
+                <img src="4.jpg" alt="" height=150px width="24%">
+                <img src="5.jpg" alt="" height=150px class="none" width="23%">
+                <img src="6.jpg" alt="" height=150px class="none" width="23%">
+            
+            <span class="left">&lt;</span>
+            <span class="right">&gt;</span>
+            <script>
+                var $oFive1=$('.five1');
+                var $aimgs=$('.five1 img');
+                var $oLeft=$('.five .left');
+                var $oRight=$('.five .right');
+                var timer=null;
+                var num=0;
+            function autoPlay(){
+            timer=setInterval(function(){
+                num++;
+                num=num%$aimgs.length;
+                $aimgs.eq(num).stop().fadeIn(1000).siblings().fadeOut(1000);;
+               
+            },3000);
+        }
+        autoPlay();
+            </script>
+        </div>
+        <div class="five2">
+             <img src="dog 1.jpg" alt="" height=85px class="dog">
+             <img src="dog 2.jpg" alt="" height=85px>
+             <img src="dog 3.jpg" alt="" height=85px>
+             <img src="dog 4.jpg" alt="" height=85px>
+            <script>
+                $(function(){
+                    $(".dog").click(function(){
+                        $(this).css('height','240px','margin','0 auto','background-color','black')
+                    });
+                })
+            </script>
+        </div>
+    </div>
+    <div class="six">
+        <img src="up.png" alt=""height=110px>
+        <div class="six1">
+            <p><a href="">联系电话:137976707017</a></p>
+            <p><a href="">地址:河南省开封市河南大学金明校区</a></p>
+            <p><a href="">技术支持:河南大学107网站工作室</a></p>
+        </div>
+    </div>
+    
+</body>
+</html>
