@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lilun4</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        * {
+            font-family: 'Arial', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', Verdana, sans-serif;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            /* color: black; */
+
+        }
+
+        .body {
+            width: 100%;
+            height: 1500px;
+            min-width: 1200px;
+            background-color: #398ec6;
+        }
+
+        .head {
+            width: 100%;
+            height: 200px;
+            position: relative;
+        }
+
+        .head-wenzi {
+            position: absolute;
+            top: 14px;
+            right: 400px;
+            height: 24px;
+            width: 190px;
+            background-color: #7ab5dd;
+        }
+
+        .head-wenzi ul li a {
+            cursor: pointer;
+            color: #fff;
+        }
+
+        .head-wenzi ul .head-wenzi-left {
+            float: left;
+        }
+
+        .head-wenzi ul .head-wenzi-right {
+            float: right;
+        }
+
+        .head-search {
+            position: absolute;
+            top: 10px;
+            right: 110px;
+            width: 251px;
+            height: 30px;
+            background-color: #7ab5dd;
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+        }
+
+        .head-search input {
+            float: left;
+            height: 30px;
+            padding-left: 16px;
+            width: 180px;
+            background-color: #afd3eb;
+            color: #7797ad;
+            border: none;
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+        }
+
+        .head-search button {
+            float: right;
+            height: 30px;
+            width: 50px;
+            font-size: 16px;
+            text-align: center;
+            line-height: 30px;
+            background-color: #4c88ae;
+            color: #afd3eb;
+            border: none;
+            cursor: pointer;
+        }
+
+        .daohang {
+            width: 100%;
+            height: 50px;
+            background-color: #084466;
+            border-top: 1px solid #fff;
+            border-bottom: 1px solid #fff;
+        }
+
+        .nav {
+            width: 1200px;
+            height: 50px;
+            margin: 0 auto;
+            text-align: center;
+            color: #fff;
+        }
+
+        .nav>li {
+            position: relative;
+            float: left;
+            width: 120px;
+            height: 50px;
+            line-height: 50px;
+            background-color: #084466;
+        }
+
+        .nav>li>a {
+            color: #fff;
+            font-size: 18px;
+        }
+
+        .nav>li>ul>li {
+            height: 36px;
+            width: 220px;
+            line-height: 36px;
+            background-color: #084466;
+        }
+
+        .nav>li>ul {
+            display: none;
+            position: absolute;
+            top: 50px;
+            left: 0;
+            z-index: 3;
+        }
+
+        .nav>li>ul>li>a {
+            color: #fff;
+            font-size: 14px;
+        }
+
+        .nav li:hover {
+            background-color: #1e7cbb;
+            font-weight: 800;
+        }
+
+        .bigbox {
+            width: 1300px;
+            height: 800px;
+            background-color: #fff;
+            margin: 0 auto;
+            margin-top: 30px;
+        }
+
+        .bigbox-left {
+            float: left;
+            width: 220px;
+            height: 800px;
+            background-color: #fff;
+        }
+
+        .bigbox-left li {
+            width: 185px;
+            height: 40px;
+            line-height: 40px;
+            padding-left: 35px;
+            background-color: #f4f4f4;
+            cursor: pointer;
+        }
+
+        .bigbox-left li:hover {
+            background-color: rgb(126, 9, 9);
+            color: #fff;
+            font-weight: 600;
+        }
+
+        .bigbox-left img {
+            cursor: pointer;
+        }
+
+        .bigbox-left .li1 {
+            width: 185px;
+            height: 40px;
+            line-height: 40px;
+            padding-left: 35px;
+            background-color: #f4f4f4;
+            font-size: 20px;
+            font-weight: 700;
+            color: #990000;
+            border-bottom: 1px dashed #ababab;
+            background-image: linear-gradient(to right, #f7a2a2, #FFF, #fff);
+        }
+
+        .bigbox-right {
+            width: 1035px;
+            height: 800px;
+            margin-left: 20px;
+            float: left;
+            margin-top: -2px;
+            background-color: #fff;
+        }
+
+        .bigbox-right-nav {
+            width: 1025px;
+            padding-left: 10px;
+            height: 50px;
+            border-bottom: 1px dashed rgb(140, 121, 121);
+        }
+
+        .bigbox-right-nav .img1 {
+            float: left;
+            margin-top: 10px;
+        }
+
+        .bigbox-right-nav li {
+            height: 50px;
+            line-height: 50px;
+            float: left;
+            margin: 0 8px;
+            font-size: 20px;
+            margin-top: 5px;
+            cursor: pointer;
+        }
+
+        .bigbox-right-nav .li1 {
+            margin-left: 15px;
+        }
+
+        .bigbox-right h4 {
+            display: inline-block;
+            width: 1035px;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .bigbox-right h5 {
+            display: inline-block;
+            width: 1035px;
+            text-align: center;
+            margin-top: 20px;
+
+            color: #a3b5c4;
+        }
+
+        .bigbox-right .p1 {
+            width: 830px;
+            margin-top: 5px;
+            margin-left: 50px;
+            font-weight: 300;
+            font-size: 17px;
+            padding: 5px 0;
+        }
+
+        .bigbox-right>img {
+            display: inline-block;
+            margin-left: 300px;
+            margin-top: 10px;
+        }
+
+        .bigbox-right .p2 {
+            display: inline-block;
+            width: 992px;
+            font-size: 15px;
+            font-weight: 200;
+            text-indent: 32px;
+            height: 27px;
+            line-height: 27px;
+            margin-top: 15px;
+            margin-left: 50px;
+        }
+          .bigbox-right .p3 {
+            display: inline-block;
+            width: 992px;
+            font-size: 15px;
+            font-weight: 200;
+            text-align: right;
+            height: 27px;
+            line-height: 27px;
+            margin-top: 15px;
+            margin-left: 50px;
+        }
+        .bigbox-right h3 {
+            display: inline-block;
+            width: 992px;
+            font-size: 15px;
+            font-weight: 200;
+            text-align: center;
+            height: 27px;
+            line-height: 27px;
+            margin-top: 15px;
+            margin-left: 50px;
+        }
+
+        .bottom {
+            width: 90%;
+            height: 120px;
+            margin: 0 auto;
+            background-color: #fff;
+            margin-top: 6px;
+        }
+
+        .bottom-color {
+            width: 100%;
+            height: 30px;
+            background-color: #04628d;
+        }
+
+        .bottom-wz {
+            width: 700px;
+            height: 40px;
+            margin: 0 auto;
+            font-size: 15px;
+            text-align: center;
+            line-height: 20px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 头部 -->
+    <div class="head"><img src="img/top-bj2.gif" width=100% height="200px">
+        <div class="head-wenzi">
+            <ul>
+                <li class="head-wenzi-left"><a>设为首页</a></li>
+                <li class="head-wenzi-right"><a>加入收藏</a></li>
+            </ul>
+        </div>
+        <div class="head-search">
+            <input type="text" placeholder="请输入搜素关键字">
+            <button>搜索</button>
+        </div>
+    </div>
+    <!-- 导航 -->
+    <div class="daohang">
+        <ul class="nav">
+            <li>
+                <a href="第三次.html">首页</a>
+            </li>
+            <li>
+                <a href="#">部门介绍</a>
+                <ul>
+                    <li><a href="#">工作职责</a></li>
+                    <li><a href="#">机构及人员</a></li>
+                    <li><a href="#">领导小组</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">党派团体</a>
+                <ul>
+                    <li><a href="#">民革河南大学支部</a></li>
+                    <li><a href="#">民盟河南大学委员会</a></li>
+                    <li><a href="#">民进河南大学总支委员会</a></li>
+                    <li><a href="#">民建河南大学总支委员会</a></li>
+                    <li><a href="#">农工党河南大学总支委员会</a></li>
+                    <li><a href="#">九三学社河南大学总支委员会</a></li>
+                    <li><a href="#">河南大学台联</a></li>
+                    <li><a href="#">河南大学侨联</a></li>
+                    <li><a href="#">河南大学知联会</a></li>
+                    <li><a href="#">河南大学留联会</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">人大政协</a>
+                <ul>
+                    <li><a href="#">人大政协</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">建言献策</a>
+                <ul>
+                    <li><a href="#">建言献策</a></li>
+
+                </ul>
+            </li>
+            <li>
+                <a href="#">政策法规</a>
+                <ul>
+                    <li><a href="#">理论经纬</a></li>
+                    <li><a href="#">学习资料</a></li>
+                    <li><a href="#">会议纪要</a></li>
+                    <li><a href="#">工作记事</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">民族宗教</a>
+                <ul>
+                    <li><a href="#">民族工作</a></li>
+                    <li><a href="#">宗教工作</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">下载专区</a>
+                <ul>
+                    <li><a href="#">资料下载</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">联系我们</a>
+                <ul>
+                    <li><a href="#">留言板</a></li>
+                    <li><a href="#">微博</a></li>
+                    <li><a href="#">联系方式</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="bigbox">
+        <div class="bigbox-left">
+            <ul>
+                <ol class="li1">理论学习</ol>
+                <li>理论学习</li>
+                <li>通知公告</li>
+                <li>新闻速递</li>
+                <li>统战忆往</li>
+                <li>人物采风</li>
+                <li>河大统战杂志</li>
+                <li>学习贯彻统一战线条例</li>
+                <ol class="li1">校园风光</ol>
+                <img src="img/nature4.jpg" width="220" height="198">
+                <ol class="li1">相关链接</ol>
+                <li>中共中央统一战线工作部</li>
+                <li>中共河南省委统战部</li>
+                <li>开封市委统战部</li>
+                <li>河南大学</li>
+                <li>"河大统战"杂志</li>
+            </ul>
+        </div>
+        <div class="bigbox-right">
+            <div class="bigbox-right-nav">
+                <img src="img/icon-index.png" width="30" height="30" class="img1">
+                <ul>
+                    <li class="li1">当前位置：</li>
+                    <li>首页</li>
+                    <li>> 理论学习</li>
+                    <li>> 正文</li>
+                </ul>
+            </div>
+            <h4>【看两会】共商国是！中央政治局常委同志的“统战声音”（四）</h4>
+            <h5>发布时间：2022-03-10 08:56:23   作者：</h5>
+            <!-- <p class="p1">习近平在中国人民大学考察时强调 坚持党的领导传承红色基因扎根中国大地 走出一条建设中国特色世界一流大学新路</p>
+            <p class="p1">王沪宁陪同考察</p> -->
+            <p class="p2">
+            3月4日，全国两会大幕正式开启。两会期间，其他中央政治局常委同志也将分别下团组和代表委员亲切交流、共商国是。
+            </p>
+            <p class="p2">
+                过去一年，在以习近平同志为核心的党中央坚强领导下，对台工作有为有效、稳中有进。当前世界百年变局加速演进，台海方向不确定不稳定性增多，但时、势、义始终在我们这一边，我们有应对各种复杂局面的综合实力和必胜信心。要贯彻新时代党解决台湾问题的总体方略和党中央对台工作决策部署，树牢底线思维，发扬斗争精神，坚持一个中国原则和“九二共识”，坚决反对“台独”分裂行径，坚决反对外部势力干涉，扎实推动两岸关系和平发展、融合发展。两岸同胞要把握历史大势，坚守民族大义，多谋增进同胞福祉之策，多做加强交流合作之事，多为促进心灵契合之举，携手共促祖国统一大业、民族复兴伟业。
+            </p>
+            <p class="p3">——3月9日，汪洋在参加台湾代表团审议时的讲话</p>
+        </div>
+    </div>
+    <div class="bottom">
+        <div class="bottom-color">
+        </div>
+        <div class="bottom-wz">
+            <ul>
+                <li>Copyright © 2019 河南大学党委统战部 技术支持 河南大学 107网站工作室 管理后台</li>
+                <li>地址：中国 河南 开封.明伦街/金明大道 邮编：475001/475004 电话：0371-265666428</li>
+            </ul>
+        </div>
+    </div>
+</body>
+<script>
+    // search
+    var text = document.querySelector('.head-search');
+    var text1 = document.querySelector('input');
+    var text2 = document.querySelector('button');
+    text.onmousemove = function () {
+
+        text1.style.backgroundColor = '#fff';
+        text2.style.backgroundColor = '#084466';
+        text2.style.color = '#fff';
+    }
+    text.onmouseleave = function () {
+
+        text1.style.backgroundColor = '#afd3eb';
+        text2.style.backgroundColor = '#4c88ae';
+        text2.style.color = '#7ab5dd';
+    }
+    // 下拉菜单
+    var nav = document.querySelector('.nav');
+    var lis = nav.children;
+    for (var i = 0; i < lis.length; i++) {
+        lis[i].onmouseover = function () {
+            this.children[1].style.display = 'block';
+        }
+        lis[i].onmouseout = function () {
+            this.children[1].style.display = 'none';
+        }
+    };
+</script>
+
+</html>
