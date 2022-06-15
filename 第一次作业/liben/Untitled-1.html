@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+<meta charset="utf-8"> 
+<title>107LAB</title> 
+<style>
+    body,img,ul,li{
+    padding: 0px;
+    margin: 0px;
+    
+}
+#header{
+    width: auto;
+    height: 60px;
+    border-bottom: 1px solid #DDDDDD;
+}
+#header_left>img{
+    width: 200px;
+    height: 50px;
+    padding-left: 230px;
+}
+#header_1>div{
+    float: left;
+}
+#header_1>a>div{
+    color: #494847 ;
+    float: left;
+    padding: 20px  10px;
+}
+#header_2{
+    padding-top: 10px;
+    padding-right: 250px;
+}
+#header_2>a>div{
+    color: #494847 ;
+    float: right;
+    padding: 10px  15px;
+}
+#header_2>a>div:nth-child(1){
+    color:#FFFFFF ;
+   background-color: #1BBD9D;
+   border-radius: 10px ;
+}
+#center>div{
+    width:500px;
+    height: 500px;
+    border:1px solid #DDDDDD;
+    margin-left: 500px;
+    margin-top: 70px;
+     text-align: center;
+}
+#center>div:nth-child(1)>h2{
+   position: relative;
+   left: 175px;
+    width: 160px;
+    height: 10px;
+ 
+}
+#center>div:nth-child(1)>ul{
+    padding-top: 0px;
+    padding-left: 300px;
+    color: #ABAAAB;
+}
+#center>div:nth-child(1)>ul>a{
+    color: #1BBD9D;
+    text-decoration: none;
+}
+#acc{
+   color:#84756C ;
+    width: 400px;
+    height: 40px;
+    margin: 10px;
+    border: #F8F8F8;
+    background-color:#F8F8F8;
+    border-radius: 3px ;
+}
+
+#submit{
+    width: 400px;
+    height: 40px;
+    background-color: #1BBD9D;
+    margin: 10px;
+    border-radius: 5px ;
+    color: #FFFFFF;
+}
+#center_bottom>a{
+    text-decoration: none;
+padding: 70px;
+color: #1BBD9D;
+}
+#center_fine{
+  
+    width: 501px;;
+    height: 183px;
+    background-color: #F8F9F9;
+}
+#center_fine>div{
+    color: #ABAAAB;
+    margin-top: 20px;
+}
+#center_fine>div>a>img{
+    margin: 0px 50px;
+}
+#center_fine>div>span{
+   margin: -10px 50px;
+    color: #ABAAAB;
+    text-decoration: none;
+}
+#up_left>img:nth-child(1){
+  width: 300px;
+  height: 100px;
+   position: relative;
+   right: 30px;
+   
+}
+#up_left>img{
+    position: relative;
+    left: 150px;
+    top:130px;
+  
+}
+#bottom{
+    margin-top: 100px;
+    width: 1519px;
+    height: 550px; 
+    background-color: #2F2F2F;
+    
+}
+#bot{
+    width: 1300px;
+    height: 60px;
+    position: relative;
+    left: 150px;
+
+border-top: 1px solid #666666;
+color: #666666;  
+}
+#bottom_center{
+    width: 900px;
+    height: 300px;
+    color: #ABAAAB;
+    position: relative;
+    left:500px ;
+    bottom: 90px;
+ 
+    text-decoration: none;
+}
+#bottom_h1{
+    position: absolute;
+    top: 0px;
+    left: 28px;
+    border-bottom:#1BBD9D 3px solid;
+}
+#bottom_1{
+    position: relative;
+
+    
+}
+#bottom_b1{
+    position: absolute;
+    left: 31px;
+    top: 60px;
+}
+#bottom_b1>li{
+    margin: 10px;
+}
+#bottom_b2>li{
+    margin: 10px;
+}
+#bottom_b3>li{
+    margin: 10px;
+}
+#bottom_b4>li{
+    margin: 10px;
+}
+#bottom_center>div>h3{
+  
+    width: 100px;
+  
+ 
+}
+#bottom_center>div>ul>li{
+    width: 100px;
+  
+
+}
+#bottom_b2{
+    position: absolute;
+    left: 131px;
+    top: 60px;
+ 
+}
+#b3{
+    position: absolute;
+    left: 350px;
+    top: 0px;
+  
+}
+#b3>h3{
+    border-bottom: #1BBD9D 3px solid;
+}
+#bottom_b3{
+    position: absolute;
+    left: 131px;
+    top: 50px;
+  
+}
+#b4{
+    position: absolute;
+    left: 700px;
+    top: 0px;
+  
+}
+#b4>h3{
+    border-bottom: #1BBD9D 3px solid;
+  
+}
+#b4_img{
+    margin: 2px;
+}
+#right{
+    width: 30px;
+    height: 140px;
+    position: fixed;
+    top: 55%;
+    right: 20px;
+    background-color: #00C2F0;
+    text-align: center;
+}
+#right>img{
+    width: 30px;
+    position: relative;
+    top: 10px;
+}
+#right>span{
+    position: relative;
+    top: 8px;
+    line-height: 10px;
+    color:#FFFFFF;
+  
+}
+</style>
+</head>
+<body>
+   <div id="header">
+       <div id="header_1">
+           <div id="header_left">
+               <img src=".\images\logo.png" alt="404">
+           </div>
+           <a href="/index.html">
+           <div id="head1"> Home </div>
+           <div id="head2"> About</div>
+           <div id="head3"> Service</div>
+           <div id="head4"> Products <img src=".\images/fa-angle-down.png" alt="404"></div>
+           <div id="head5"> Team</div>
+           <div id="head6"> Join</div>
+           <div id="head7"> Contact  <img src=".\images/fa-angle-down.png"></div> </a>
+       </div>
+       <div id="header_2">
+           <a href="https://qq.com">
+        <div> 注册</div>
+        <div> 登录</div>
+    </a>
+       </div>
+
+   </div>
+   <div id="center">
+    <div> <h2>107LAB登录</h2> <br> <ul>还没有注册吗？<a href=""> 去注册</a></ul>
+    <form action="">    
+        <input id="acc" type="text" name="user" value="请输入您的邮箱地址或手机号"><br>
+        <input id="acc" type="text" name="password" value="请输入密码"><br>
+        <input id="submit" type="submit"  value="登录">
+    </form>
+       <div id="center_bottom">
+           <a href=""> 使用手机验证码登录  </a> <a href="">忘记密码 </a>
+       </div>
+       <div id="center_fine">
+           <div>  <hr>  ——或使用第三方登录——</div>
+           <div> <a href=""><img src=".\images\qq.png" alt=""><img src=".\images\github.png" alt=""></a><br>
+           </div>
+           <div> <span> QQ</span><span>GitHub</span> </div>
+        
+       </div>
+    </div>
+    
+   </div>
+   <div id="bottom">
+      <div>   
+          <div id="up_left"> 
+        <img src=".\images/logo.png" alt="">  <br>    
+        <img src=".\images\tracup.png" alt="">
+        <img src=".\images\frontjs.png" alt="">
+        </div>
+          <div id="bottom_center">
+              <div id="bottom_1">
+                  <h3 id="bottom_h1">关于我们</h3>
+                  <ul id="bottom_b1">
+                      <li>单人单桌</a></li>
+                      <li>配备电脑</a></li>
+                      <li>两台大空调</a></li>
+                      <li>冬暖夏凉</a></li>
+                      <li>还不快来</a> </li>
+                  </ul>
+              
+                 
+                  <ul id="bottom_b2">
+                      <li>一起聚餐</a></li>
+                      <li>一起唱歌</a></li>
+                      <li>一起旅行</a></li>
+                      <li>互帮互助</a></li>
+                      <li>来就对了</a></li>
+                  </ul>
+                </div>
+                  <div id="b3"><h3>服务技能</h3>
+                  <ul id="bottom_b4">
+                      <li>学院官网</a></li>
+                      <li>专题官网</a></li>
+                      <li>公司官网</a></li>
+                      <li>信息管理系统</a></li>
+                      <li>有偿服务</a></li>
+                  </ul>
+                  <ul id="bottom_b3">
+                      <li>主学技能</a></li>
+                      <li>HTML</a></li>
+                      <li>CSS</a></li>
+                      <li>
+                        JavaScript</a>
+                      </li>
+                      <li>PHP</a></li>
+                  </ul>
+                  </div> 
+                <div id="b4">
+                    <h3>选择语言</h3>
+                    <ul>
+                        <li><img src=".\images\language_chinese.png" alt=""> 中文</li>
+                       <li><img src=".\images\language_english.png" alt=""> 英文</li>
+                    </ul>
+                
+                <div id="b4_img"><img src=".\images\weixin.png" alt="">
+                <img src=".\images\zhihu.png" alt=""></div></div>
+            </div>
+         
+          <div id="bot">
+          <span>此网站仅供学习使用<br>
+          @Copyright 2020 河南大学计算机与信息工程学院107网站工作室 All Right Reserved</span>
+           </div>
+      </div>
+    </div>
+   <div id="right">
+       <img src=".\images\zixun.png" alt="">
+       <span>咨询<br>·<br>建议</span>
+   </div>
+</body>
+</html>
