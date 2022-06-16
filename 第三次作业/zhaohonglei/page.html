@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>留-言-板</title>
+    <link rel="stylesheet" href="css/page.css">
+    <link rel="stylesheet" href="css/common.css">
+    <script src="js/page.js"></script>
+</head>
+<div class="messageBoard">
+    <form action="" method="post">
+        <p class="title"> &nbsp;&nbsp;发表留言：</p>
+        <div class="box_1">
+            <label class="username name">
+                <span>用 户 名：</span>
+                <input type="text">
+            </label>
+            <label class="password name">
+                <span>密 码：</span>
+                <input type="password">
+            </label>
+            <label class="noname">
+                <input type="checkbox" name="匿名发言" id="">
+                匿名发言
+            </label><br><br>
+            <label class="input_title">
+                标&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;题：<input type="text" maxlength="40">
+                <span>*</span>
+                (标题限制 40 个字符以内)
+            </label>
+            <div class="area">
+                <ul>
+                    <li>
+                        <h5 title="字体">字体</h5>
+                        <table border="1" style="border-collapse:collapse;">
+                            <tr>
+                                <td>
+                                    <a href="javascript:;" style="font-family:'宋体';">宋体</a><br>
+                                    <a href="javascript:;" style="font-family: '黑体';">黑体</a><br>
+                                    <a href="javascript:;" style="font-family: '楷体';">楷体</a><br>
+                                    <a href="javascript:;" style="font-family: '隶书';">隶书</a><br>
+                                    <a href="javascript:;" style="font-family: '幼圆';">幼圆</a>
+                                </td>
+                                <td>
+                                    <a href="javascript:;" style="font-family: 'Arial';">Arial</a><br>
+                                    <a href="javascript:;" style="font-family: 'Courier';">Courier</a><br>
+                                    <a href="javascript:;" style="font-family: 'Courier New' ;">Courier New</a><br>
+                                    <a href="javascript:;" style="font-family: 'Times New Roman';">Times New
+                                        Roman</a><br>
+                                    <a href="javascript:;" style="font-family: 'Verdana';">Verdana</a>
+                                </td>
+                            </tr>
+                        </table>
+                    </li>
+                    <li>
+                        <h5 title="字号">字号</h5>
+                        <table border="1" style="border-collapse:collapse;">
+                            <tr>
+                                <td>
+                                    <a href="javascript:;" style="font-size: 7.5pt;">六号 7.5pt</a><br>
+                                    <a href="javascript:;" style="font-size: 9pt;">小五 9pt</a><br>
+                                    <a href="javascript:;" style="font-size: 10.5pt;">五号 10.5pt</a><br>
+                                    <a href="javascript:;" style="font-size: 12pt;">小四 12pt</a>
+                                </td>
+                                <td>
+                                    <a href="javascript:;" style="font-size: 14pt;">四号 14pt</a><br>
+                                    <a href="javascript:;" style="font-size: 16pt;">三号 16pt</a><br>
+                                    <a href="javascript:;" style="font-size: 18pt;">小二 18pt</a>
+                                </td>
+                            </tr>
+                        </table>
+                    </li>
+                    <li>
+                        <h5>加粗</h5>
+                        <a href="javascript:;"></a>
+                    </li>
+                    <li>
+                        <h5>斜体</h5>
+                        <a href="javascript:;"></a>
+                    </li>
+                    <li>
+                        <h5>下划</h5>
+                        <a href="javascript:;"></a>
+                    </li>
+                    <li>
+                        <h5 title="对齐">对齐</h5>
+                        <table border="1" style="border-collapse:collapse;">
+                            <td>
+                                <a href="javascript:;">左对齐</a><br>
+                                <a href="javascript:;">居中对齐</a><br>
+                                <a href="javascript:;">右对齐</a>
+                            </td>
+                        </table>
+                    </li>
+                    <li>
+                        <h5 title="编号">编号</h5>
+                        <table border="1" style="border-collapse:collapse;">
+                            <td>
+                                <a href="javascript:;">数字列表</a><br>
+                                <a href="javascript:;">符号列表</a>
+                            </td>
+                        </table>
+                    </li>
+                    <li>
+                        <h5 title="减少缩进">减少</h5>
+                    </li>
+                    <li>
+                        <h5 title="增加缩进">增加</h5>
+                    </li>
+                    <li>
+                        <h5 title="字体颜色">字体</h5>
+                        <table class="color cell_1" style="border-collapse:collapse ;">
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </table>
+                    </li>
+                    <li>
+                        <h5 title="背景颜色">背景</h5>
+                        <table class="color cell_2" style="border-collapse:collapse ;">
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </table>
+                    </li>
+                </ul>
+                <textarea name="" id="" cols=" 30" rows="10"></textarea>
+            </div>
+            <label class="yzm">请输入验证码：<input type="text">
+                <span class="random"></span>
+                <button>发言</button>
+            </label>
+    </form>
+</div>
+<div class="close"><a href="javascript:;" onclick="window.close()">关闭窗口</a></div>
+</div>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,296 @@
+/* 格式化开始 */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* 使得斜体文字不倾斜 */
+em,
+i {
+    font-style: normal;
+}
+
+/* 去掉li的圆点 */
+li {
+    list-style: none;
+}
+
+img {
+    /* border 0照顾低版本浏览器
+    如果图片外面包含了链接会出现
+    边框的问题 */
+    border: 0;
+    vertical-align: middle;
+}
+
+button {
+    cursor: pointer;
+}
+
+a {
+    color: #666;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+button,
+input {
+    font-family: Microsoft YaHei Hetti SC, tahoma, arial, Hiragino Sans GB, "\5B8B\4F53", sans-serif;
+}
+
+
+.hide .none {
+    display: none;
+}
+
+.clearfix:after {
+    visibility: hidden;
+    clear: both;
+    display: block;
+    content: "";
+    height: 0;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* 格式化结束 */
+
+/* Header Start */
+.header {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.header .header_content {
+    position: relative;
+    height: 200px;
+}
+
+.header .header_content .logo {
+    width: 100%;
+    height: 100%;
+}
+
+.header .header_content .function {
+    position: absolute;
+    top: 10px;
+    right: 6%;
+    height: 30px;
+    line-height: 30px;
+}
+
+.header .header_content .function .set_add {
+    float: left;
+    font-size: 16px;
+}
+
+.header .header_content .function span {
+    margin: auto 30px;
+    color: #c2c2c2;
+}
+
+.header .header_content .function .set_add .set,
+.add {
+    width: 96px;
+    color: #fff;
+    font-family: '宋体';
+    cursor: pointer;
+}
+
+.header .header_content .function .search {
+    float: left;
+    margin-left: 30px;
+}
+
+.header .header_content .function input {
+    width: 200px;
+    height: 30px;
+    border: 0;
+    font-size: 14px;
+    text-indent: 15px;
+    border-radius: 6px 0 0 6px;
+}
+
+.header .header_content .function button {
+    width: 50px;
+    height: 32px;
+    border: 0;
+    background-color: #084466;
+    color: #fff;
+    font-size: 16px;
+}
+
+.mask {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0px;
+    width: 254px;
+    height: 32px;
+    border-radius: 6px 0 0 6px;
+    background-color: rgba(175, 211, 235, 0.5);
+}
+
+.header .header_nav {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 1px auto;
+    background-color: #084466;
+}
+
+.header .header_nav>ul {
+    width: 1200px;
+    padding: 0 30px;
+    margin: 0 auto;
+}
+
+.header .header_nav>ul>li {
+    float: left;
+    position: relative;
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+    background-color: #084466;
+}
+
+.header .header_nav>ul>li>a {
+    display: inline-block;
+    width: 120px;
+    color: #fff;
+    font-size: 18px;
+}
+
+.nav_choose {
+    font-weight: bold;
+    background-color: #0594c9 !important;
+    letter-spacing: 1px;
+}
+
+.header_nav>ul>li>ul>li>a:hover {
+    font-weight: bold !important;
+    background-color: #0594c9 !important;
+    letter-spacing: 1px;
+}
+
+.header .header_nav>ul>li>ul {
+    display: none;
+    position: absolute;
+    z-index: 2;
+    background-color: #084466;
+    top: 50px;
+    left: 0;
+    width: 220px;
+    text-align: center;
+}
+
+.header .header_nav>ul>li:hover>ul {
+    display: block;
+}
+
+.header .header_nav>ul>li>ul>li {
+    height: 36px;
+    line-height: 36px;
+}
+
+.header .header_nav>ul>li>ul>li a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    font-weight: normal;
+    font-size: 14px;
+    color: #fff;
+}
+
+/* Header End */
+
+/* Footer Start */
+.footer {
+    width: 90%;
+    border-top: 1px solid #c2c2cc;
+    height: 120px;
+    margin: 0 auto;
+}
+
+.footer .footer_line {
+    width: 100%;
+    height: 30px;
+    background-color: #04628D;
+}
+
+.footer .footer_content {
+    width: 100%;
+    height: 70px;
+    padding-top: 15px;
+}
+
+.footer .footer_content p {
+    text-align: center;
+    font-size: 14px;
+    color: #333;
+}
+
+.footer .footer_content p a {
+    font-size: 16px;
+    color: #000;
+}
+
+.footer .footer_content p a:hover {
+    color: #9e0300;
+}
+
+/* Footer End */
+
+/* back start */
+html {
+    scroll-behavior: smooth;
+}
+/* 这个css是真的没见过transition:1s */
+.back {
+    position: fixed;
+    opacity: 0;
+    transition: 1s;
+    right: 10px;
+    bottom: 20px;
+    height: 50px;
+    width: 50px;
+    border: 1px solid #cccccc;
+}
+.back {
+   /* display: none; */
+    position: fixed;
+    right: 0;
+    bottom: 200px;
+    width: 50px;
+    height: 50px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+	opacity: 1;
+    line-height: 46px;
+    text-align: center;
+    font-size: 38px;
+    color: #ccc;
+    cursor: pointer;
+}
+
+/* back end */
+
+/* if exist 发言板  start*/
+.speak {
+    position: absolute;
+    top: 80px;
+    left: 10px;
+}
+
+.speak a {
+    display: block;
+    color: skyblue;
+}
+
+.speak a:hover {
+    color: #0594c9;
+}
+
+/* 发言版 end */
