@@ -1,0 +1,550 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html,body{
+    min-width: 1570px;
+    font-family: '新宋';
+    overflow: auto;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.colorChoose{
+    background-color: #EC6B0E;
+}
+
+/* Header Start */
+.header{
+    width: 100%;
+    height: 600px;
+    border-top: 1px solid #B6B4B6;
+    border-bottom: 2px solid #01AAB5;
+}
+.header .headerContent{
+    width: 1570px;
+    height: 140px;
+    margin: 0 auto;
+    background-color: #F5AA02;
+}
+
+.header .logo{
+    height: 148px;
+    margin-left: 68px;
+    float: left;
+}
+.header .logo img{
+    height: 148px;
+}
+
+.header .search{
+    margin: 47px 227px;
+    float: right;
+    height: 46px;
+    width: 218px;
+    font-size: 15px;
+    color: #757575;
+    background-color: #01ACB7;
+    border-radius: 23px;
+}
+.header input{
+    height: 40px;
+    width: 150px;
+    outline: none;
+    border: 3px solid #01ACB7;
+    border-radius:20px 0 0 20px ;
+    background-color: #F5AA02;
+    padding-left: 20px;
+}
+.header a{
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    margin-left: -2px;
+}
+
+.header .menu{
+    height: 60px;
+    width: 100%;
+    margin-top: -8px;
+    float: left;
+     
+}
+.header .menu> ul{
+    height: 60px;
+    width: 1278px;
+    margin: 0 auto;   
+    background-color:#01ACB7;
+    padding-left: 292px;  
+}    
+.header .menu> ul> li{
+    line-height: 60px;
+    width: 139px;
+    float: left;
+    font-size: 18px;
+    text-align: center;
+}
+#firstLi{
+    margin-right: 8px;
+}
+.header .menu> ul>li ul{
+    display: none;
+    position: relative;
+    top: -2px;
+    box-shadow: 3px 3px 5px  #000;
+    z-index: 3;
+}
+.header .menu> ul>li li{
+    font-size: 18px;
+    color: #fff;
+    background-color: #01ACB7;
+    line-height: 60px;
+    border-bottom: 1px solid black;
+}
+.header .menu> ul>li li:hover{
+    background-color: #EC6B0E;
+    cursor: pointer;
+}
+
+
+.animate_1{
+    position: relative; 
+    top: 0;
+    left: 50%;
+    margin-left: -785px;
+    width:1570px;
+    height: 400px;
+    overflow: hidden;
+}
+.animate_1 ul{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 600%;
+    background-color: yellowgreen;
+}
+.animate_1 ul li{
+    display:block;
+    float: left;
+    width: 1570px;
+}
+.animate_1 img{
+    width: 1570px;
+    height: 400px;
+}
+.animate_1 .btns> img{ 
+    position: absolute;
+    top:50%;
+    margin-top: -30px; 
+    width: 60px;
+    height: 60px;
+    z-index: 3;         
+}
+.animate_1 .btns img.next{
+    right:0;
+}
+.circle{
+    width: 405px;
+    height: 50px;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.4);
+    margin-left: -250px;
+    border-radius: 25px 25px 0 0;
+    z-index:2;
+    padding-left: 95px;
+}
+.circle ol li{
+    list-style: none;
+    width: 40px;
+    height: 15px;
+    float: left;
+    background: #fff; 
+    text-align: center; 
+    cursor: pointer;
+    border-radius: 7.5px;
+    margin: 18px 50px 17px 0;
+}
+ol li.current{
+    background:#EC6B0E ;
+}
+/* Header End */
+
+/* Content Start */
+.content{
+    position: absolute;
+    top: 600px;
+    height: 534px;
+    width: 100%;
+    padding: 0 200px 0 176px;
+}
+.contentTop{
+    position: absolute;
+    top: 27px;
+    left: 50%;
+    margin-left: -785px;
+    width: 1194px;
+    height: 300px;
+}
+.contentTop .poem_1{
+    height: 300px;
+    width: 492px;
+    border-radius: 20px 20px 0 0;
+    overflow: hidden;
+    box-shadow: 0 15px 10px  rgba(0, 0, 0, 0.2);
+}
+.contentTop .sdgtTitle{
+    display: inline-block;
+    width: 246px;
+    height: 38px;
+    color: #fff;
+    background-color: #EC6B0E;
+    padding-top: 12px;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 20px 0 0 0;
+    cursor: pointer;
+}
+.contentTop .mjhTitle{
+    display: inline-block;
+    width: 246px;
+    height: 38px;
+    color: #fff;
+    background-color: #F5AA02;
+    padding-top: 12px;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 0 20px 0 0;
+    cursor: pointer;
+}
+.contentTop .poem_1 ul{
+    margin-top: 22px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.contentTop .poem_1 ul li{
+    display: block;
+
+    line-height: 14px;
+    font-size: 14px;
+}
+.contentTop .poem_1 ul li:hover{
+    color:red;
+}
+.contentTop span.left{
+    display: block;
+    float: left;
+    width: 360px;
+    margin-bottom: 27px;
+}
+.contentTop span.right{
+    display: block;
+    float: right;
+    margin-bottom: 27px;
+}
+.contentTop .mjh{
+    display: none;
+}
+
+.contentTop .animate_2{
+    position: absolute;
+    left: 505px;
+    top: 0;
+    width: 395px;
+    height: 300px;
+}
+.contentTop .animate_2 .bigBox{
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: solid 5px #F5AA02;
+    border-radius: 5px;
+    width: 383px;
+    background-color: #F5AA02;
+    height: 215px;
+    z-index: 2;
+    overflow: hidden;
+}
+.contentTop .animate_2 .intro{
+    position: absolute;
+    bottom: 0;
+    z-index: 3;
+    background-color: rgba(0, 0, 0, 0.4);
+    width: 356px;
+    height: 22px;
+    line-height: 15px;
+    font-size: 15px;
+    color: #fff;
+    padding-top: 7px;
+    padding-left: 29px;
+    border-radius: 3px;
+}
+.contentTop .animate_2 .bigBox img{
+    width: 385px;
+    height: 215px;
+    border-radius: 3px;
+}
+.contentTop .animate_2 .bigBox ul{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 600%;
+
+}
+.contentTop .animate_2 .bigBox ul> li{
+    float: left;
+    width: 385px;
+}
+.contentTop .animate_2 .box{
+    position: absolute;
+    left: 0;
+    top: 237px;
+    width: 385px;
+    height: 63px;
+}
+.contentTop .animate_2 .box img{
+    width: 84px;
+    height: 55px;
+}
+.contentTop .animate_2 .box ol{
+    width: 500%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+.contentTop .animate_2 .box ol> li{
+    float: left;
+    width: 84px;
+    height: 55px;
+    background-color: #CADDE7;
+    border: 4px solid #CADDE7;
+    margin-left: 5px;
+}
+.contentTop .animate_2 .box ol> li.current{
+    border: 4px solid #EC6B0E;
+    background-color: #EC6B0E;
+}
+.contentTop .animate_2 img.icoTop{
+    position: absolute;
+    top: -4px;
+    left: 47px;
+    width: 8px;
+    height: 4px;
+    z-index: 3;
+}
+
+.contentTop .poem_2{
+    width: 287px;
+    height: 297px;
+    border-left: 3px solid #F5AA02;
+    border-bottom: 3px solid #F5AA02; 
+    position: absolute;
+    left: 905px;
+    top: 0;
+}
+.contentTop .poem_2 span{
+    display: block;
+    padding-left: 8px;
+    padding-top: 10px;
+    width: 279px;
+    height: 30px;
+    background: #F5AA02;
+    line-height: 19px;
+    font-size: 19px;
+    color: #fff;
+    cursor: pointer;
+}
+.contentTop .poem_2 span.cxTitle{
+    background: #EC6B0E;
+}
+.contentTop .poem_2 ul{
+    padding-left: 8px;
+    padding-top: 24px;
+    padding-bottom: 10px;
+    height: 146px;
+    border-right: 3px solid #F5AA02;
+}
+
+.contentTop .poem_2 ul.yyjb{
+    display: none;
+}
+.contentTop .poem_2 ul.qm{
+    display: none;
+}
+.contentTop .poem_2 ul li{
+    display: block;
+    line-height: 11px;
+    font-size: 11px;
+    margin-bottom: 29px;
+}
+
+.contentBottom{
+    position: absolute;
+    top: 345px;
+    left: 50%;
+    margin-left: -785px;
+    width: 1201px;
+    height: 190px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+}
+.contentBottom .animate_3{
+    position: relative;
+    top: 0;
+    left: 11px;
+    width: 820px;
+    height: 140px;
+    border: 3px solid #F5AA02;
+    overflow: hidden;
+    border-radius: 3px;    
+}
+.contentBottom .animate_3 ul{
+    padding-left: 11px;
+    width: 700%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.contentBottom .animate_3 ul> li{
+    float: left;
+    margin-right: 22px;
+}
+.contentBottom .animate_3 img{
+    width: 184px;
+    height: 140px;
+}
+.contentBottom .animate_3 .prev-next{
+        position: absolute;
+        width: 800px;
+        height: 36px;
+        margin-top: 59px;
+        margin-left: 13px;
+        z-index: 3;
+        overflow: hidden;
+}
+.contentBottom .animate_3 p.prev{
+    float: left;
+    width: 20px;
+    height: 36px;
+    border-radius: 3px;
+    background-image: url(images/prev_next.png);
+    background-position: 1px 38px ;
+    background-size: 28px 90px;
+    
+}
+.contentBottom .animate_3 p.next{
+    float: right;
+    width: 20px;
+    height: 36px;
+    border-radius: 3px;
+    background-image: url(images/prev_next.png);
+    background-position: -8.5px -3px ;
+    background-size: 28px 90px;
+}
+
+.contentBottom .dog{
+    position: absolute;
+    left: 856px;
+    top: 0;
+    width: 345px;
+    height: 146px;
+    background-color: #fff;
+    box-shadow: -4px -10px 10px rgba(0, 0, 0, 0.1);
+}
+.contentBottom .dog img{
+    margin: 4px;
+    width: 161px;
+    height: 65px;
+    float: left;
+    cursor: pointer;
+}
+
+/* Content End */
+
+/* 狗子的大图 Start*/
+.bigDog {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-left: -412px;
+    margin-top: -260px;
+    z-index: 10;
+    height: 530px;
+    width: 830px;
+    overflow: hidden;
+    display: none;
+}
+.bigDog .cont{
+    position: absolute;
+    top: 9px;
+    height: 510px;
+    width: 810px;
+    border: 5px solid #B6B4B6;
+    background-color:  #B6B4B6;
+}
+.bigDog .cont ul>li>img{ 
+    position: absolute;   
+    width: 810px;
+    height: 510px;
+}
+.bigDog .close{
+    position: absolute;
+    right: -13px;
+    top: -13px;
+    z-index: 10;
+    width: 27px;
+}
+.mask{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+/* 狗子的大图 End */
+
+/* Footer Start */
+.footer{
+    position: absolute;
+    top: 1134px;
+    margin: 0 auto;
+    width: 100%;
+    height: 180px;
+    background-color: #F5AA02;
+}
+.footerLogo{
+    width: 400px;
+    position: absolute;
+    left: 50%;
+    margin-left: -510px;
+}
+.footerLogo img{
+    width: 400px;
+}
+
+.footer .about ul{
+    position: absolute;
+    left: 50%;
+    margin-left: 30px; 
+    height: 180px;
+}
+.footer .about li{
+    line-height: 17px;
+    font-size: 17px;
+    margin-top: 33px;
+}
+.footer a{
+    display: inline-block;
+    color: #000;
+}
+.footer .about a:hover{
+    color: red;
+    cursor: pointer;
+}
+/* Footer End */

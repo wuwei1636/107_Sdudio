@@ -1,0 +1,429 @@
+body {
+    /* 抗锯齿 */
+    -webkit-font-smoothing: antialiased;
+    background-color: #d6e8f4;
+    font: 12px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #666;
+}
+
+/* Content Start */
+.content {
+    position: relative;
+    width: 1210px;
+    margin: 0 auto;
+    background-color: #fff;
+}
+
+/* Content top start */
+.content .content_top {
+    position: relative;
+    width: 100%;
+    height: 100px;
+    background-image: url("../images/headNew.gif");
+    border-bottom: 3px solid #d6e8f4;
+}
+
+.content .content_top span a {
+    display: block;
+    position: absolute;
+    top: 28px;
+    width: 1210px;
+    height: 44px;
+    line-height: 44px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 44px;
+    font-family: '宋体';
+    color: #fff;
+}
+
+/* top end */
+
+/* Content center start */
+.content .content_center {
+    padding: 10px;
+    overflow: hidden;
+}
+
+.content .content_center .scroll_img {
+    position: relative;
+    float: left;
+    width: 320px;
+    height: 250px;
+    overflow: hidden;
+}
+
+.content .content_center .scroll_img ul {
+    position: absolute;
+    width: 550%;
+    height: 230px;
+}
+
+.content .content_center .scroll_img ul li {
+    float: left;
+    width: 320px;
+    height: 230px;
+    float: left;
+}
+
+.content .content_center .scroll_img ul li img {
+    float: left;
+    width: 320px;
+    height: 230px;
+    cursor: pointer;
+}
+
+.content .content_center .scroll_img ul li span a {
+    display: inline-block;
+    line-height: 9pt;
+    font-size: 9pt;
+    text-align: center;
+    font-weight: bold;
+    color: #333;
+}
+
+.content .content_center .scroll_img ul li span a:hover {
+    color: #23527c;
+    font-weight: bold;
+}
+
+.content .content_center .scroll_img .title {
+    position: absolute;
+    width: 100%;
+    bottom: -5px;
+    height: 20px;
+}
+
+.content .content_center .scroll_img .title a {
+    display: inline-block;
+    width: 100%;
+    line-height: 20px;
+    text-align: center;
+    font-size: 9pt;
+    font-weight: bold;
+    color: #000;
+}
+
+.content .content_center .scroll_img ol {
+    position: absolute;
+    right: 0;
+    bottom: 25px;
+}
+
+.content .content_center .scroll_img ol li {
+    float: left;
+    padding: 0px 7px;
+    margin-right: 5px;
+    border-radius: 5px;
+    color: #fff;
+    background-color: rgba(102, 102, 102, 0.3);
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.content .content_center .scroll_img ol li.current {
+    font-weight: bold;
+    background-color: #f17b0a;
+    color: #fff;
+}
+
+.content .content_center .report {
+    float: left;
+}
+
+/* llxx tzgg 公共属性start */
+.content .content_center .report .llxx,
+.tzgg {
+    float: left;
+    margin-left: 10px;
+}
+
+.content .content_center .report .title {
+    position: relative;
+    margin-bottom: 10px;
+    background-color: #f0f0f0;
+}
+
+.content .content_center .report .title .name {
+    display: inline-block;
+    position: relative;
+    left: 30%;
+    width: 120px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    font-size: 18px;
+    color: #fff;
+    background-color: #084466;
+
+}
+
+.content .content_center .report .title .name:hover {
+    color: #23527c;
+}
+
+.content .content_center .report .title .link,
+.content .content_center .more {
+    display: inline-block;
+    position: absolute;
+    right: 15px;
+    width: 65px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 16px;
+    color: #c2c2dc;
+    text-align: center;
+}
+
+.content .content_center .link:hover,
+.content .content_center .more a:hover {
+    color: #fdd700 !important;
+}
+
+.content .content_center .report .title .link span,
+.content .content_center .more span {
+    width: 20px;
+    height: 20px;
+    margin-left: 5px;
+    color: #fff;
+    background-color: #f5aa02;
+    border-radius: 50%;
+}
+
+.content .content_center .report .text ul li:hover a,
+.content .content_center .report .text ul li:hover span {
+    color: red;
+}
+
+.content .content_center .report .text ul li a {
+    display: inline-block;
+    color: #000;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.content .content_center .report .text ul li span {
+    float: right;
+    color: #333;
+
+}
+
+/* llxx tzgg 公共属性End */
+.content .content_center .report .llxx {
+    width: 470px;
+}
+
+.content .content_center .report .llxx .text ul li {
+    position: relative;
+    height: 32px;
+}
+
+.content .content_center .report .llxx .text ul li img {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    vertical-align: 12px;
+}
+
+.content .content_center .report .llxx .text ul li a {
+    width: 350px;
+    height: 27px;
+    padding-left: 10px;
+    line-height: 27px;
+    font-size: 14px;
+}
+
+.content .content_center .report .llxx .text ul li span {
+    font-size: 14px;
+}
+
+.content .content_center .report .tzgg {
+    width: 380px;
+}
+
+.content .content_center .report .tzgg .text ul li {
+    position: relative;
+    height: 37px;
+}
+
+.content .content_center .report .tzgg .text ul li i {
+    position: absolute;
+    top: 7px;
+    left: 2px;
+    width: 15px;
+    height: 15px;
+    background-color: #fe6625;
+}
+
+.content .content_center .report .tzgg .text ul li a {
+    width: 220px;
+    height: 32px;
+    padding-left: 30px;
+    line-height: 32px;
+    font-size: 13px;
+}
+
+.content .content_center .report .tzgg .text ul li span {
+    line-height: 33px;
+    font-size: 14px;
+}
+
+.content .content_center .menu {
+    float: left;
+    position: relative;
+    width: 378px;
+    margin-right: 20px;
+}
+
+.content .content_center .menu .menu_title {
+    height: 22px;
+    border-bottom: 2px solid #8a8a8a;
+    margin-bottom: 10px;
+    color: #950301;
+}
+
+.content .content_center .menu .menu_title .box {
+    float: left;
+}
+
+.content .content_center .menu .menu_title h2 {
+    float: left;
+    padding-left: 31px;
+    line-height: 23px;
+    font-size: 20px;
+    font-family: '微软雅黑';
+    cursor: pointer;
+}
+
+.content .content_center .menu .menu_title .more {
+    line-height: 23px;
+}
+
+.content .content_center .menu .menu_title .more a {
+    color: #c2c2d2;
+}
+
+.content .content_center .menu .menu_title .line {
+    position: absolute;
+    top: 12px;
+    height: 2px;
+}
+
+.content .content_center .menu ul li {
+    float: left;
+    height: 38px;
+    width: 100%;
+    font-size: 15px;
+}
+
+.content .content_center .menu ul li:hover a,
+.content .content_center .menu ul li:hover span {
+    color: red;
+}
+
+.content .content_center .menu ul li img {
+    margin: 5px;
+}
+
+.content .content_center .menu ul li a {
+    display: inline-block;
+    height: 32px;
+    color: #000;
+}
+
+.content .content_center .menu ul li span {
+    float: right;
+    padding-right: 18px;
+    color: #333;
+}
+
+.content .content_center .rwcf {
+    margin: 0;
+}
+
+/* Content center end */
+/* Content bottom start */
+.content .content_bottom {
+    position: relative;
+    padding: 10px;
+    width: 1150px;
+    height: 224px;
+    overflow: hidden;
+}
+
+.content .content_bottom .ecode_left {
+    float: left;
+    padding: 10px 10px 0 10px;
+    background-color: #f0f0f0;
+}
+
+.content .content_bottom .ecode_right {
+    float: right;
+    padding: 10px 10px 0 10px;
+    background-color: #f0f0f0;
+}
+
+.content .content_bottom .ecode_left img,
+.content .content_bottom .ecode_right img {
+    width: 100px;
+    height: 100px;
+}
+
+.content .content_bottom .middle {
+    position: absolute;
+    left: 50%;
+    top: 10px;
+    margin-left: -445px;
+    padding-bottom: 30px;
+    width: 890px;
+
+}
+
+.content .content_bottom .middle>a>img {
+    width: 100%;
+}
+
+.content .content_bottom .middle .five {
+    padding-left: 20px;
+    padding-bottom: 15px;
+    margin-top: 5px;
+    border: 1px dashed #900;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.content .content_bottom .middle .five li {
+    float: left;
+    width: 130px;
+    height: 54px;
+    padding-top: 15px;
+    padding-right: 42px;
+
+}
+
+.content .content_bottom .middle .five li img {
+    width: 100%;
+    height: 100%;
+}
+
+/* Content bottom end */
+
+/* Content End */
+
+/* 浮动窗 Start */
+.float {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 30px;
+    background-color: red;
+    text-align: center;
+    line-height: 30px;
+    font-size: 25px;
+    color: black;
+    cursor: pointer;
+}
+
+/* 浮动窗 End */
