@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>107网站</title>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			.top{
+				height: 50px;
+				border-bottom: #EBEBEB solid 1px;
+			}			
+			.nav ul li {
+				list-style-type: none;		
+				float: left;
+			}
+			.nav ul li a {
+				width: 50px;
+				height: 10px;
+				display: block;
+				padding: 10px 20px 10px 20px;
+				color: #555555;
+				text-align: center;
+				text-decoration: none;		
+			}
+			.nav{
+				position: absolute;
+				top: 5px;
+				padding-left: 200px;
+				width: 1500px;
+			}
+
+			.prompt {
+				text-align: right;
+				width: 370px;
+				margin-top: 20px;
+			}
+
+			.forget {
+				
+				color: #1BBD9D;
+			}
+
+			.test {
+				text-align: left;
+				padding-left: 10px;
+				color: #1BBD9D;
+			}
+
+			.box {
+				width: 400px;
+				height: 200px;
+				padding: 20px 50px 60px 50px;
+
+				margin-top: 30px;
+				position: absolute;
+				left: 50%;
+				margin-left: -250px;
+				border: 1px #E6E6E6 solid;
+				
+			}
+
+			.button1 {
+				height: 40px;
+				width: 380px;
+				margin-top: 20px;
+				border-radius: 10px;
+				background-color: #1BBD9D;
+				font-size: 16px;
+				color: #F8F8F8;
+				margin-bottom: 5px;
+			}
+
+			.input1 {
+				height: 40px;
+				width: :380px;
+				border-radius: 10px;
+				margin-top: 10px;
+			}
+
+			.input2 {
+				height: 40px;
+				width: 380px;
+				margin-top: 20px;
+				border-radius: 10px;
+				box-shadow: ;
+			}
+
+			.person {
+				text-align: center;
+				height: 20px;
+			}
+
+			input {
+				border: none;
+				background-color: #F8F8F8;
+				margin-left: 10px;
+			}
+
+			a {
+				text-decoration: none;
+			}
+
+			a:hover {
+				color: #6effef;
+			}
+
+			input {
+				border: none;
+				box-shadow: none;
+				font-size: 15px;
+				color: #333333;
+				outline: none;
+				/*鼠标点击是输入框颜色不发生改变*/
+			}
+			.box2 {
+				width: 400px;
+				height: 90px;
+				padding: 0px 50px 0px 50px;			
+				margin-top: 310px;
+				position: absolute;
+				left: 50%;
+				margin-left: -250px;
+				border: 1px #E6E6E6 solid;			
+				background-color: #F8F9F9;
+			}
+			.title span {
+				display: block;
+				/*设置为块级元素会独占一行形成上下居中的效果*/
+				text-align: center;
+				color: #B6B6B6;
+				position: relative;
+				/*定位横线（当横线的父元素）*/
+				margin-top: 10px;
+				padding-bottom: 15px;
+			}
+
+			h5.title span:before,
+			h5.title span:after {
+				content: '';
+				/*CSS伪类用法*/
+				position: absolute;
+				/*定位背景横线的位置*/
+				top: 30%;
+				background: #B6B6B6;
+				/*宽和高做出来的背景横线*/
+				width: 9%;
+				height: 1px;
+			}
+			h5.title span:before {left: 25%;	/*调整背景横线的左右距离*/}
+			h5.title span:after {right: 25%;}
+			.footer{
+				margin-top: 440px;
+				height: 245px;
+				background-color: #2F2F2F;
+			}
+			.box3{
+				position: absolute;
+				margin-top: 15px;
+				border-bottom: #4A4F4A solid 1px;
+				margin-left: 150px;
+				height: 180px;
+				width: 1200px;
+				
+			}
+			.box3 ul li{list-style-type: none;}
+			.box3 ul li a{color: #666666;font-size: 8px;}
+			.box31{				
+				float: left;
+				margin-left: 100px;
+				margin-top: 10px;
+			}
+			.box32{
+				float:left;
+				margin-left: 150px;
+				margin-top: 10px;
+			}
+			.box33{
+				float:left;
+				margin-left: 150px;
+				margin-top: 10px;
+			}
+			.box4{
+				position: absolute;
+				padding-top:200px ;
+				padding-left: 150px;
+				color: #4A4F4A;font-size: 8px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="top">
+			<div class="logo" style="padding-left: 50px;">
+				<img src="./img/logo.png" style="padding-left: 20px;" width="150px">
+			</div>
+			<div class="nav" style="padding-left: 250px;">
+				<ul class="top-left"  >
+					<li><a href="#">Home</a></li>
+					<li><a href="#">About</a></li>
+					<li><a href="#">Service</a></li>
+					<li><a href="#">Product</a></li>
+					<li><a href="#">Team</a></li>
+					<li><a href="#">Join</a></li>
+					<li><a href="#">Contact</a></li>
+				</ul>
+				<ul class="top-right" style="padding-left: 200px;">
+					<li><a href="#">登录</a></li>
+					<li><a href="#">注册</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="box">
+			<h2 class="person">107LAB登录</h2>
+			<h5 class="prompt"><a>还没有注册吗？</a><span style="color:#1BBD9D ;"><a>去注册</a></span></h5>
+			<from method="post" action="save.php">
+				<div class="inputbox">
+					<input type="password" class="input1" style="width: 380px;" placeholder="请输入您的邮箱地址或手机号"><br>
+					<input type="password" class="input2" placeholder="请输入密码"><br>
+					<input type="button" class="button1" value="登录"><br>
+					<span class="test"><a>使用手机验证码登录</a></span>
+					<span class="forget" style="padding-left: 170px;"><a>忘记密码</a></span>
+
+				</div>
+			</from>
+		</div>
+		<div class="box2">
+
+			<div class="row">
+				<h5 class="title"><span>或使用第三方登录</span></h5>
+			</div>
+			<div class="logo1" >
+				<img src="./img/qq.png" style="padding-left:  100px ;" width="30px">
+			
+				<img src="./img/github.png" style="padding-left:  140px;" width="30px">
+			</div>
+		</div>
+		<div class="footer">
+			<div class="box3">
+				<div style="float: left;">
+				<div>
+					<img src="./img/logo.png" style="padding: 0px 15px 0px 0px" width="220px">
+				</div>
+				<div >
+					<img src="./img/tracup.png" style="padding: 0px 10px 20px 50px" width="55px">
+					<img src="./img/frontjs.png" style="padding: 0px 15px 20px 0px" width="55px">
+				</div>	
+				</div>
+				<div class="box31">
+					<span style="color: #F8F8F8;">关于我们</sapn><br>
+					<span>&nbsp;</span><br>
+					<ul   >
+						<li><a href="#">单人单桌&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;一起聚餐</a></li>
+						<li><a href="#">配备电脑&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;一起唱歌</a></li>
+						<li><a href="#">两台大空调&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;一起旅行</a></li>
+						<li><a href="#">冬暖夏凉&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;互帮互助</a></li>
+						<li><a href="#">还不快来&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;来就对了</a></li>
+					</ul>
+				</div>
+				<div class="box32">
+					<span style="color: #F8F8F8;">服务技能</sapn><br>
+					<span>&nbsp;</span><br>
+					<ul   >
+						<li><a href="#">学院官网&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;主学技能</a></li>
+						<li><a href="#">专题网站&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HTML</a></li>
+						<li><a href="#">公司官网&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CSS</a></li>
+						<li><a href="#">信息管理系统&nbsp;&nbsp;&nbsp;&nbsp;JavaScript</a></li>
+						<li><a href="#">有偿服务&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PHP</a></li>
+					</ul>
+				</div>
+				<div class="box33">
+					<span style="color: #F8F8F8;">选择语言</span><br>
+					<span>&nbsp;</span><br>
+					<img src="img/language_chinese.png" style="padding-right: 8px;"><span style="color: #666666;font-size: 8px;">中文</span><br>
+					<img src="img/language_english.png" style="padding-right: 8px;"><span style="color: #666666;font-size: 8px;">English</span><br>
+					<span>&nbsp;</span><br>
+					<img src="img/weixin.png" style="padding-right: 10px;" width="30px"><img src="img/zhihu.png" width="30px">
+				</div>
+				
+			</div>
+			<span class="box4">此网站仅供学习使用<br>@Copyright 2020 河南大学计算机与信息工程学院107网站工作室 All Rights Reserved</span>
+			
+		</div>
+
+
+	</body>
+</html>
