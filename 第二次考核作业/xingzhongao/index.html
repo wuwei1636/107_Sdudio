@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>第二次招新任务</title>
+    <link rel="stylesheet" href="/index.css">
+    <script src="jquery.min.js"></script>
+</head>
+
+<body>
+    <!--页头-->
+    <header class="header">
+        <div>
+            <div class="logo"><img src="./img/logo.png"></div>
+            <div class="sou">
+                <input class="text" placeholder="站内搜索" required>
+                <button class="submit">搜索</button>
+            </div>
+            <script>
+                $(".text").click(function () {
+                    $(".text").css("background-color", "white")
+                })
+            </script>
+        </div>
+        <div class="caidan" style="z-index: 2;">
+            <ul class="topnav">
+                <li><a href="" style="color: #D2FDFE">首页 </a></li>
+                <li>
+                    <a href="" style="color: #D2FDFE">中心简介</a>
+                    <div class="submenu">
+                        <div class="xc">
+                            <a>部门配置</a>
+                        </div>
+                        <div class="xc">
+                            <a>中心任务</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="" style="color: #D2FDFE">中心动态</a>
+                    <div class="submenu">
+                        <div class="xc">
+                            <a>中心动态</a>
+                        </div>
+                        <div class="xc">
+                            <a>最新通知</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="" style="color: #D2FDFE">教师培训</a>
+                    <div class="submenu">
+                        <div class="xc">
+                            <a>基本课程培训</a>
+                        </div>
+                        <div class="xc">
+                            <a>专业课程培训</a>
+                        </div>
+                        <div class="xc">
+                            <a>教学技能培训</a>
+                        </div>
+                        <div class="xc">
+                            <a>教学工作坊</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="" style="color: #D2FDFE">教学研究 </a>
+                    <div class="submenu">
+                        <div class="xc">
+                            <a>科研项目</a>
+                        </div>
+                        <div class="xc">
+                            <a>教学成果</a>
+                        </div>
+                        <div class="xc">
+                            <a>教学研讨会</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="" style="color: #D2FDFE">资源中心 </a>
+                    <div class="submenu">
+                        <div class="xc">
+                            <a>校外视频资源</a>
+                        </div>
+                        <div class="xc">
+                            <a>校内视频资源</a>
+                        </div>
+                        <div class="xc">
+                            <a>基础资源</a>
+                        </div>
+                        <div class="xc">
+                            <a>其它资源</a>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="" style="color: #D2FDFE">咨询服务 </a></li>
+            </ul>
+        </div>
+        <script>
+            $(function () {
+                $(".header .caidan .topnav li a").mouseover(function () {
+                    $(this).siblings(".submenu").slideDown("slow");
+                });
+                $(".header .caidan .topnav li a").mouseout(function () {
+                    $(this).siblings(".submenu").slideup("slow");
+                });
+                $(".header .caidan .topnav>li .submenu .xc ").mouseover(function () {
+                    $(this).css("background", "#FFA900")
+                })
+                $(".header .caidan .topnav>li .submenu .xc ").mouseout(function () {
+                    $(this).css("background", "#01ACB7")
+                })
+            })
+        </script>
+    </header>
+    <!--主体-->
+    <div class="zhuti">
+        <!--第一个-->
+        <div class="banner" style="z-index: 0;">
+            <!--轮播图片-->
+            <div class="carousel">
+                <img src="./img/banner1.jpg" alt="" script="">
+                <img src="./img/banner2.jpg" alt="" script="">
+                <img src="./img/banner3.jpg" alt="" script="">
+                <img src="./img/banner4.jpg" alt="" script="">
+                <img src="./img/banner1.jpg" alt="" script="">
+            </div>
+            <!--底部导航-->
+            <ul class="indications">
+                <li class="active"></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+            <!--左右导航-->
+            <div class="arrows">
+                <span class="left-arrow" data-operate="-"></span>
+                <span class="right-arrow" data-operate="+"></span>
+            </div>
+        </div>
+        <script>
+            let len = $(".carousel img").length;
+            let cutIdx = 0;
+            let slide = () => {
+                if ($(".carousel").is(":animated")) return;
+                cutIdx++;
+                $(".carousel").animate({
+                    left: -1270 * cutIdx
+                }, function () {
+                    if (cutIdx == len - 1) {
+                        cutIdx = 0;
+                        $(".carousel").css({
+                            "left": 0
+                        })
+                    }
+                    $(".indications>li").eq(cutIdx).addClass("active").siblings().removeClass('active');
+                })
+            }
+            let timer = setInterval(slide, 3000)
+
+
+            $(".banner").on('mouseenter', function () {
+                clearInterval(timer)
+            })
+
+            $(".banner").on("mouseleave", function () {
+                timer = setInterval(slide, 3000)
+            })
+
+            $(".left-arrow").on('click', function () {
+                if ($(".carousel").is(":animated")) return;
+                if (--cutIdx < 0) {
+                    cutIdx = len - 2;
+                    $(".carousel").css({
+                        "left": -1270 * (len - 1)
+                    })
+                }
+                $(".carousel").animate({
+                    left: -1270 * cutIdx
+                })
+                $(".indications>li").eq(cutIdx).addClass("active").siblings().removeClass('active');
+            })
+            $(".right-arrow").on('click', function () {
+                slide()
+            })
+
+            $(".indications>li").on('click', function () {
+                cutIdx = $(this).index();
+                $(".carousel").animate({
+                    left: -1270 * cutIdx
+                })
+                $(".indications>li").eq(cutIdx).addClass("active").siblings().removeClass('active');
+            })
+
+        </script>
+        <!--其它的-->
+
+        <div class="t1">
+            <!--第二个-->
+            <div class="t2">
+                <div class="t211">
+                    <a href="" style="color: #D2FDFE" class="shui">水调歌头</a>
+                </div>
+                <div class="t212">
+                    <a href="" class="t2121">
+                        <p style="font-size: 12px;color: black;" class="t2121">明月几时有？把酒问青天。　　　　　　　　　　　　　2019年3月12日</p>
+                    </a>
+                    <a href="" class="t2121">
+                        <p style="font-size: 12px;color: black;" class="t2121">不知天上宫阙，今夕是何年。　　　　　　　　　　　　2019年3月12日</p>
+                    </a>
+                    <a href="" class="t2121">
+                        <p style="font-size: 12px;color: black;" class="t2121">我欲乘风归去，又恐琼楼玉宇，高处不胜寒。　　　　　2019年3月12日</p>
+                    </a>
+                    <a href="" class="t2121">
+                        <p style="font-size: 12px;color: black;" class="t2121">起舞弄清影，何似在人间？　　　　　　　　　　　　　2019年3月12日</p>
+                    </a>
+                    <a href="" class="t2121">
+                        <p style="font-size: 12px;color: black;" class="t2121">转朱阁，低绮户，照无眠。　　　　　　　　　　　　　2019年3月12日</p>
+                    </a>
+                    <a href="" class="t2121">
+                        <p style="font-size: 12px;color: black;" class="t2121">不应有恨，何事长向别时圆？　　　　　　　　　　　　2019年3月12日</p>
+                    </a>
+
+                </div>
+                <div class="t221">
+                    <a href="" style="color: white" class="man">满江红·写怀</a>
+                </div>
+                <div class="t222">
+                    <a href="" class="t2121">
+                        <p style="font-size: 12px;color: black;" class="t2121">怒发冲冠，凭栏处，潇潇雨歇。　　　　　　　　　　　2019年3月12日</p>
+                    </a>
+                    <a href="" class="t2121">
+                        <p style="font-size: 12px;color: black;" class="t2121">抬望眼，仰天长啸，壮怀激烈。　　　　　　　　　　　2019年3月12日</p>
+                    </a>
+                    <a href="" class="t2121">
+                        <p style="font-size: 12px;color: black;" class="t2121">三十功名尘与土，八千里路云和月。　　　　　　　　　2019年3月12日</p>
+                    </a>
+                    <a href="" class="t2121">
+                        <p style="font-size: 12px;color: black;" class="t2121">莫等闲，白了少年头，空悲切！　　　　　　　　　　　2019年3月12日</p>
+                    </a>
+                    <a href="" class="t2121">
+                        <p style="font-size: 12px;color: black;" class="t2121">靖康耻，犹未雪。臣子恨，何时灭！　　　　　　　　　2019年3月12日</p>
+                    </a>
+                    <a href="" class="t2121">
+                        <p style="font-size: 12px;color: black;" class="t2121">驾长车，踏破贺兰山缺。　　　　　　　　　　　　　　2019年3月12日</p>
+                    </a>
+
+                </div>
+            </div>
+            <script>
+                $(function () {
+                    $(".shui").mouseover(function () {
+                        $(".t222").fadeOut(1000);
+                        $(".t212").fadeIn(1000);
+                        $(".t211").css("background-color", "#EC6B10");
+                        $(".t221").css("background-color", "#FFA902");
+                        $(".t222").css("display", "none");
+                    })
+                    $(".man").mouseover(function () {
+                        $(".t212").fadeOut(500);
+                        $(".t222").fadeIn(1000);
+                        $(".t221").css("background-color", "#EC6B10");
+                        $(".t211").css("background-color", "#FFA902");
+                        $(".t212").css("display", "none");
+                    })
+                    $(".t2121").mousemove(function () {
+                        $(this).children("p").css("color", "red");
+                    })
+                    $(".t2121").mouseout(function () {
+                        $(this).children("p").css("color", "black");
+                    })
+                })
+            </script>
+            <!--第三个-->
+            <div class="t3">
+                <div class="banner2">
+                    <div class="carousel2">
+                        <img src="./img/img1.jpg" alt="" script="">
+                        <img src="./img/img2.jpg" alt="" script="">
+                        <img src="./img/img3.jpg" alt="" script="">
+                        <img src="./img/img4.jpg" alt="" script="">
+                        <img src="./img/img1.jpg" alt="" script="">
+                    </div>
+                </div>
+                <div class="t32">
+                    <ul class="indications2">
+                        <li class="active2"> <img src="./img/img1.jpg" alt="" script="">
+                            <div class="top1"><img src="./img/icoTop.gif" alt="" script=""></div>
+                        </li>
+                        <li><img src="./img/img2.jpg" alt="" script="">
+                            <div class="top2"><img src="./img/icoTop.gif" alt="" script=""></div>
+                        </li>
+                        <li><img src="./img/img3.jpg" alt="" script="">
+                            <div class="top3"><img src="./img/icoTop.gif" alt="" script=""></div>
+                        </li>
+                        <li><img src="./img/img4.jpg" alt="" script="">
+                            <div class="top4"><img src="./img/icoTop.gif" alt="" script=""></div>
+                        </li>
+                    </ul>
+                </div>
+                <script>
+                    let len2 = $(".carousel2 img").length;
+                    let cutIdx2 = 0;
+                    let slide2 = () => {
+                        if ($(".carousel2").is(":animated")) return;
+                        cutIdx2++;
+                        $(".carousel2").animate({
+                            left: -320 * cutIdx2
+                        }, function () {
+                            if (cutIdx2 == len2 - 1) {
+                                cutIdx2 = 0;
+                                $(".carousel2").css({
+                                    "left": 0
+                                })
+                            }
+                            $(".indications2>li").eq(cutIdx2).addClass("active2").siblings().removeClass('active2');
+                        })
+                    }
+                    let timer2 = setInterval(slide2, 2000)
+
+
+                    $(".banner2").on('mouseenter', function () {
+                        clearInterval(timer2)
+                    })
+
+                    $(".banner2").on("mouseleave", function () {
+                        timer2 = setInterval(slide2, 2000)
+                    })
+
+                    $(".indications2>li").on('click', function () {
+                        cutIdx2 = $(this).index();
+                        $(".carousel2").animate({
+                            left: -320 * cutIdx2
+                        })
+                        $(".indications2>li").eq(cutIdx2).addClass("active2").siblings().removeClass('active2');
+                    })
+
+                </script>
+            </div>
+            <!--第四个-->
+            <div class="t4">
+                <div class="t4a">
+                    <div class="t41">
+                        <a href="" style="color: white" class="t411">春晓</a>
+                    </div>
+                    <div class="t42">
+                        <p style="font-size: 12px;" class="t421">春眠不觉晓</p>
+                        <p style="font-size: 12px;" class="t421">处处闻啼鸟</p>
+                        <p style="font-size: 12px;" class="t421">夜来风雨声</p>
+                        <p style="font-size: 12px;" class="t421">花落知多少</p>
+                    </div>
+                </div>
+                <div class="t4b">
+                    <div class="t43">
+                        <a href="" style="color: white" class="t411">夜雨寄北</a>
+                    </div>
+                    <div class="t430">
+                        <p style="font-size: 12px;" class="t421">君问归期未有期</p>
+                        <p style="font-size: 12px;" class="t421">巴山夜雨涨秋池</p>
+                        <p style="font-size: 12px;" class="t421">何当共剪西窗烛</p>
+                        <p style="font-size: 12px;" class="t421">却话巴山夜雨时</p>
+                    </div>
+                </div>
+                <div class="t4c">
+                    <div class="t44">
+                        <a href="" style="color: white" class="t411">清明</a>
+                    </div>
+                    <div class="t440">
+                        <p style="font-size: 12px;" class="t421">清明时节雨纷纷</p>
+                        <p style="font-size: 12px;" class="t421">路上行人欲断魂</p>
+                        <p style="font-size: 12px;" class="t421">借问酒家何处有</p>
+                        <p style="font-size: 12px;" class="t421">牧童遥指杏花村</p>
+                    </div>
+                </div>
+
+            </div>
+            <script>
+                $(function () {
+                    $(".t41").mouseover(function () {
+                        $(".t41").css("background-color", "#EC6B10");
+                        $(".t43").css("background-color", "#FFA902");
+                        $(".t44").css("background-color", "#FFA902");
+                    })
+                    $(".t43").mouseover(function () {
+                        $(".t41").css("background-color", "#FFA902")
+                        $(".t43").css("background-color", "#EC6B10")
+                        $(".t44").css("background-color", "#FFA902")
+                        $(".t42").slideUp("slow")
+                        $(".t430").show();
+                        $(".t4b").animate({
+                            top: -135
+                        }, 1000)
+                    })
+                    $(".t44").mouseover(function () {
+                        $(".t41").css("background-color", "#FFA902")
+                        $(".t43").css("background-color", "#FFA902")
+                        $(".t44").css("background-color", "#EC6B10")
+                        $(".t430").slideUp("slow")
+                        $(".t440").show();
+                        $(".t4c").animate({
+                            top: -270
+                        }, 1000)
+                    })
+                })
+            </script>
+            <!--第五个-->
+            <div class="t5">
+                <div class="banner3">
+                    <div class="carousel3">
+                        <img class="t" src="./img/1.jpg" alt="" script="">
+                        <img class="t" src="./img/2.jpg" alt="" script="">
+                        <img class="t" src="./img/3.jpg" alt="" script="">
+                        <img class="t" src="./img/4.jpg" alt="" script="">
+                        <img class="t" src="./img/5.jpg" alt="" script="">
+                        <img class="t" src="./img/6.jpg" alt="" script="">
+                        <img class="t" src="./img/1.jpg" alt="" script="">
+                        <img class="t" src="./img/2.jpg" alt="" script="">
+                        <img class="t" src="./img/3.jpg" alt="" script="">
+                        <img class="t" src="./img/4.jpg" alt="" script="">
+                    </div>
+                    <div class="arrows">
+                        <span class="left-arrow" data-operate="-"></span>
+                        <span class="right-arrow" data-operate="+"></span>
+                    </div>
+                </div>
+                <script>
+                    let len3 = $(".carousel3 img").length;
+                    let cutIdx3 = 0;
+                    let slide3 = () => {
+                        if ($(".carousel3").is(":animated")) return;
+                        cutIdx3++;
+                        $(".carousel3").animate({
+                            left: -166 * cutIdx3
+                        }, function () {
+                            if (cutIdx3 == len3 - 4) {
+                                cutIdx3 = 0;
+                                $(".carousel3").css({
+                                    "left": 0
+                                })
+                            }
+
+                        })
+                    }
+                    let timer3 = setInterval(slide3, 2000)
+
+
+                    $(".banner3").on('mouseenter', function () {
+                        clearInterval(timer3)
+                    })
+
+                    $(".banner3").on("mouseleave", function () {
+                        timer3 = setInterval(slide3, 2000)
+                    })
+
+                    $(".left-arrow").on('click', function () {
+                        if ($(".carousel3").is(":animated")) return;
+                        if (--cutIdx3 < 0) {
+                            cutIdx3 = len3 - 2;
+                            $(".carousel3").css({
+                                "left": -166 * (len3 - 1)
+                            })
+                        }
+                        $(".carousel3").animate({
+                            left: -166 * cutIdx3
+                        })
+
+                    })
+                    $(".right-arrow").on('click', function () {
+                        slide3()
+                    })
+                </script>
+            </div>
+            <!--第六个-->
+            <div class="t6">
+                <div class="dogs">
+                    <a target="">
+                        <div class="dog1"><img src="./img/dog 1.jpg"></div>
+                    </a>
+                    <a target="">
+                        <div class="dog2"><img src="./img/dog 2.jpg"></div>
+                    </a>
+                    <a target="">
+                        <div class="dog3"><img src="./img/dog 3.jpg"></div>
+                    </a>
+                    <a target="">
+                        <div class="dog4"><img src="./img/dog 4.jpg"></div>
+                    </a>
+                </div>
+                <div class="bigdogs" style="z-index: 2;">
+                    <div class="bigdog1">
+                        <div class="bigdog11"><img src="./img/dog 1.jpg" alt="" script=""></div>
+                        <a target="">
+                            <div class="close"><img src="./img/mke_close.png" alt="" script=""></div>
+                        </a>
+                    </div>
+                    <div class="bigdog2">
+                        <div class="bigdog11"><img src="./img/dog 2.jpg" alt="" script=""></div>
+                        <a target="">
+                            <div class="close"><img src="./img/mke_close.png" alt="" script=""></div>
+                        </a>
+                    </div>
+                    <div class="bigdog3">
+                        <div class="bigdog11"><img src="./img/dog 3.jpg" alt="" script=""></div>
+                        <a target="">
+                            <div class="close"><img src="./img/mke_close.png" alt="" script=""></div>
+                        </a>
+                    </div>
+                    <div class="bigdog4">
+                        <div class="bigdog11"><img src="./img/dog 4.jpg" alt="" script=""></div>
+                        <a target="">
+                            <div class="close"><img src="./img/mke_close.png" alt="" script=""></div>
+                        </a>
+                    </div>
+                </div>
+                <script>
+                    $(".dog1").click(function () {
+                        $(".bigdogs").fadeIn(0);
+                        $(".bigdog1").fadeIn(0);
+                    })
+                    $(".dog2").click(function () {
+                        $(".bigdogs").fadeIn(0);
+                        $(".bigdog2").fadeIn(0);
+                    })
+                    $(".dog3").click(function () {
+                        $(".bigdogs").fadeIn(0);
+                        $(".bigdog3").fadeIn(0);
+                    })
+                    $(".dog4").click(function () {
+                        $(".bigdogs").fadeIn(0);
+                        $(".bigdog4").fadeIn(0);
+                    })
+                    $(".close").click(function () {
+                        $(".bigdogs").fadeOut(0);
+                        $(".bigdog1").fadeOut(0);
+                        $(".bigdog2").fadeOut(0);
+                        $(".bigdog3").fadeOut(0);
+                        $(".bigdog4").fadeOut(0);
+                    })
+                </script>
+            </div>
+
+        </div>
+    </div>
+    <!--页脚-->
+    <footer class="footer" style="z-index: 0;">
+        <div class="up clearfix::after"><img src="./img/up.png"></div>
+        <div class="fone">
+            <p class="fzi">联系电话:13797707017</p>
+            <p class="fzi">地址:河南省开封市河南大学金明校区</p>
+            <span>技术支持:</span>
+            <a href="http://www.107lab.com" style="color: black;" class="107">河南大学107网站工作室</a>
+        </div>
+        <script>
+            $(function () {
+                $(".107").mousemove(function () {
+                    $(".107").css("color", "red");
+                })
+                $(".107").mouseout(function () {
+                    $(".107").css("color", "black");
+                })
+            })
+        </script>
+    </footer>
+</body>
+
+</html>

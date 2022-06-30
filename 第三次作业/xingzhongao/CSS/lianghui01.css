@@ -1,0 +1,303 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/*页头*/
+.header {
+    width: 100%;
+    height: 312px;
+    display: block;
+    position: relative;
+}
+
+.img1 img {
+    width: 100%;
+    height: 252px;
+}
+
+.h1 {
+    color: white;
+    position: absolute;
+    left: 60%;
+    top: 15px;
+}
+
+.ss {
+    font-size: 15px;
+    color: white;
+
+}
+
+.jr {
+    left: 950px;
+    font-size: 15px;
+    color: white;
+}
+
+.sj {
+    font-size: 19px;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.sou {
+    display: inline;
+    position: absolute;
+    left: 150px;
+    width: 340px;
+    height: 50px;
+}
+
+.text {
+    height: 30px;
+    width: 200px;
+    font-size: 19px;
+    padding-left: 20px;
+    background-color: #AFD3EB;
+    border-style: ridge;
+    border-color: black;
+    border-width: 0.5px;
+
+
+}
+
+.submit {
+    height: 30px;
+    width: 60px;
+    font-size: 19px;
+    background-color: #AFD3EB;
+    color: #FFFFFF;
+    position: relative;
+    top: 0.5px;
+}
+
+/*下拉式菜单*/
+.caidan {
+    background-color: #084466;
+    width: 100%;
+    height: 60px;
+    display: block;
+    position: absolute;
+    top: 253px;
+
+}
+
+.topnav {
+    position: absolute;
+
+    width: 90%;
+}
+
+.header .caidan .topnav>li {
+    float: left;
+    background: #084466;
+    width: 11%;
+    text-align: center;
+    height: 60px;
+    line-height: 60px;
+    font-size: 18px;
+    box-sizing: border-box;
+}
+
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.header .caidan .topnav>li:hover {
+    background: #337ab7;
+}
+
+.header .caidan .topnav>li .submenu {
+    text-align: center;
+    line-height: 60px;
+    font-size: 19px;
+    width: 250px;
+    display: none;
+    /*不生成盒子*/
+    border: 2px solid #ccc;
+    box-sizing: border-box;
+    background-color: #084466;
+}
+
+.header .topnav>li:hover .submenu {
+    display: block;
+}
+
+.header .caidan .topnav>li .submenu .xc:hover {
+    background: #337ab7;
+}
+
+.xc {
+    height: 60px;
+    color: white;
+}
+
+.zhuti {
+    position: relative;
+    width: 1263px;
+    height: 1180px;
+    padding-top: 30px;
+    margin: 0 auto;
+}
+
+/*left*/
+.left {
+    position: relative;
+    width: 214px;
+    height: 780px;
+    background-color: #F4F4F4;
+}
+.lilun {
+    position: relative;
+    height: 40px;
+    border-bottom-style: dotted;
+    font-size: 20px;
+}
+
+.li {
+    color: red;
+    position: absolute;
+    top: 7px;
+    left: 25px;
+}
+
+.lit {
+    width: 214px;
+    height: 280px;
+}
+
+.lit1 {
+    width: 184px;
+    height: 40px;
+    padding-left: 30px;
+}
+.nature4 img {
+    width: 214px;
+    padding-top: 2px;
+}
+/*右*/
+.right {
+    width: 1029px;
+    height: 1000px;
+    position: absolute;
+    top: 30px;
+    left: 234px;
+}
+
+.r1 {
+    width: 1019px;
+    height: 50px;
+    background-color: white;
+    position: absolute;
+    left: 10px;
+    border-bottom-style: dotted;
+}
+
+.r1 img {
+    width: 30px;
+    height: 28px;
+    margin-top: 15px;
+}
+
+.dang {
+    padding-left: 15px;
+    padding-right: 10px;
+}
+
+.shou {
+    padding-left: 15px;
+    padding-right: 10px;
+    font-size: 18px;
+}
+
+.xx {
+    font-size: 18px;
+}
+.r2{
+    width: 1019px;
+    height: 80px;
+    position: absolute;
+    left: 10px;
+    top: 52px;
+
+}
+.r21{
+    height: 20px;
+    position: absolute;
+    top: 20px;
+    left: 310px;
+    font-size: 18px;
+    display: inline;
+}
+.r22{
+    position: absolute;
+    top:60px;
+    left: 350px;
+    font-size: 14px;
+    display: inline;
+}
+.r3{
+    position: absolute;
+    top: 132px;
+    left: 30px;
+
+}
+.r32{
+    padding-top: 20px;
+}
+.r33{
+    font-size: 18px;
+    padding-left: 450px;
+    padding-top: 20px;
+}
+.r34{
+    padding-top: 20px;
+}
+.r35{
+    font-size: 18px;
+    padding-left: 450px;
+}
+.r36{
+    padding-top: 20px;
+}
+.r37{
+    font-size: 18px;
+    padding-left: 450px;
+}
+/*页脚*/
+.footer {
+    width: 100%;
+    height: 165px;
+    position: relative;
+    top: 60px;
+
+}
+
+.footer1 {
+    background-color: #084466;
+    width: 90%;
+    height: 25px;
+    margin: 0 auto;
+    position: relative;
+    top: 15px;
+}
+
+.ft1 {
+    width: 800px;
+    height: 55px;
+    margin: 15px auto 0 auto;
+}
+
+.ftword {
+    font-size: 16px;
+    color: black;
+}
